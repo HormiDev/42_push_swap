@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 21:28:51 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/06 23:28:45 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/07 00:10:25 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	push(t_stack **stack_a, t_stack **stack_b)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (*stack_b == 0)
 		return ;

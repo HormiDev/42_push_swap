@@ -6,15 +6,15 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:30:41 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/06 23:49:34 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/07 00:12:12 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack *rotate(t_stack *stack)
+t_stack	*rotate(t_stack *stack)
 {
-	t_stack *tmp;
+	t_stack	*tmp;
 
 	if (stack == 0 || stack->next == 0)
 		return (stack);
@@ -25,17 +25,17 @@ t_stack *rotate(t_stack *stack)
 	return (stack);
 }
 
-void ra(t_push_swap *push_swap)
+void	ra(t_push_swap *push_swap)
 {
 	push_swap->a = rotate(push_swap->a);
 }
 
-void rb(t_push_swap *push_swap)
+void	rb(t_push_swap *push_swap)
 {
 	push_swap->b = rotate(push_swap->b);
 }
 
-void rr(t_push_swap *push_swap)
+void	rr(t_push_swap *push_swap)
 {
 	push_swap->a = rotate(push_swap->a);
 	push_swap->b = rotate(push_swap->b);
