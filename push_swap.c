@@ -6,11 +6,38 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/06 23:54:13 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/07 23:57:26 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int stack_size(t_stack *stack)
+{
+	int size;
+
+	size = 0;
+	while (stack != 0)
+	{
+		size++;
+		stack = stack->next;
+	}
+	return (size);
+}
+
+t_stack	*min_num(t_stack *stack)
+{
+	t_stack *min;
+
+	min = stack;
+	while (stack != 0)
+	{
+		if (stack->content < min->content)
+			min = stack;
+		stack = stack->next;
+	}
+	return (min);
+}
 
 void print_push_swap(t_push_swap *push_swap)
 {
