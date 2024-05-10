@@ -6,13 +6,13 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/07 23:57:26 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/10 02:09:47 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int stack_size(t_stack *stack)
+int ft_stack_size(t_stack *stack)
 {
 	int size;
 
@@ -25,7 +25,7 @@ int stack_size(t_stack *stack)
 	return (size);
 }
 
-t_stack	*min_num(t_stack *stack)
+t_stack	*ft_stack_min_num(t_stack *stack)
 {
 	t_stack *min;
 
@@ -37,6 +37,46 @@ t_stack	*min_num(t_stack *stack)
 		stack = stack->next;
 	}
 	return (min);
+}
+
+int ft_stack_position(t_stack *stack, t_stack *element)
+{
+	int position;
+
+	position = 0;
+	if (stack == 0 || element == 0)
+		return (0);
+	while (stack != 0)
+	{
+		if (stack == element)
+			return (position);
+		position++;
+		stack = stack->next;
+	}
+	return (0);
+}
+
+void ft_push_swap(t_push_swap *push_swap)
+{
+	t_stack *min;
+
+	while (push_swap->a != 0)
+	{
+		min = ft_stack_min_num(push_swap->a);
+		if (ft_stack_position(push_swap->a, min) < ft_stack_size(push_swap->a) / 2)
+		{
+			while (push_swap->a != min)
+				ra(push_swap);
+		}
+		else
+		{
+			while (push_swap->a != min)
+				rra(push_swap);
+		}
+		pb(push_swap);
+	}
+	while (push_swap->b != 0)
+		pa(push_swap);
 }
 
 void print_push_swap(t_push_swap *push_swap)
@@ -70,7 +110,7 @@ t_stack	*stack_last(t_stack *stack)
 	return (stack);
 }
 
-t_stack *add_front_new_stack(int content, t_stack *stack)
+t_stack *ft_add_front_new_stack(int content, t_stack *stack)
 {
 	t_stack *new;
 
@@ -82,7 +122,7 @@ t_stack *add_front_new_stack(int content, t_stack *stack)
 	return (new);
 }
 
-t_push_swap *init_push_swap(void)
+t_push_swap *ft_init_push_swap(void)
 {
 	t_push_swap *push_swap;
 
@@ -105,7 +145,7 @@ int main(int argc, char **argv)
 		printf("Error: Faltan argumentos\n");
 		return (0);
 	}
-	push_swap = init_push_swap();
+	push_swap = ft_init_push_swap();
 	if (push_swap == 0)
 	{
 		printf("Error: No se pudo inicializar push_swap\n");
@@ -113,12 +153,12 @@ int main(int argc, char **argv)
 	}
 	while (cont < argc)
 	{
-		push_swap->a = add_front_new_stack(ft_atoi(argv[cont]), push_swap->a);
+		push_swap->a = ft_add_front_new_stack(ft_atoi(argv[cont]), push_swap->a);
 		cont++;
 	}
 	printf("inicio\n");
-	push_swap->b = add_front_new_stack(5, push_swap->b);
 	print_push_swap(push_swap);
+	/*
 	printf("sa\n");
 	sa(push_swap);
 	print_push_swap(push_swap);
@@ -130,6 +170,10 @@ int main(int argc, char **argv)
 	print_push_swap(push_swap);
 	printf("rra\n");
 	rra(push_swap);
+	print_push_swap(push_swap);
+	*/
+	ft_push_swap(push_swap);
+	printf("fin\n");
 	print_push_swap(push_swap);
 	return (0);
 }
