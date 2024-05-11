@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/10 02:09:47 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/12 00:08:22 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -156,24 +156,6 @@ int main(int argc, char **argv)
 		push_swap->a = ft_add_front_new_stack(ft_atoi(argv[cont]), push_swap->a);
 		cont++;
 	}
-	printf("inicio\n");
-	print_push_swap(push_swap);
-	/*
-	printf("sa\n");
-	sa(push_swap);
-	print_push_swap(push_swap);
-	printf("pa\n");
-	pa(push_swap);
-	print_push_swap(push_swap);
-	printf("ra\n");
-	ra(push_swap);
-	print_push_swap(push_swap);
-	printf("rra\n");
-	rra(push_swap);
-	print_push_swap(push_swap);
-	*/
 	ft_push_swap(push_swap);
-	printf("fin\n");
-	print_push_swap(push_swap);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:50:31 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/07 00:11:36 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/11 23:01:38 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,15 +31,18 @@ t_stack	*reverse_rotate(t_stack *stack)
 void	rra(t_push_swap *push_swap)
 {
 	push_swap->a = reverse_rotate(push_swap->a);
+	printf("rra\n");
 }
 
 void	rrb(t_push_swap *push_swap)
 {
 	push_swap->b = reverse_rotate(push_swap->b);
+	printf("rrb\n");
 }
 
 void	rrr(t_push_swap *push_swap)
 {
 	push_swap->a = reverse_rotate(push_swap->a);
 	push_swap->b = reverse_rotate(push_swap->b);
+	printf("rrr\n");
 }
