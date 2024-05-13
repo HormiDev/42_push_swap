@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/13 01:40:06 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/13 13:51:14 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,8 @@ int	ft_stack_position(t_stack *stack, t_stack *element)
 	return (0);
 }
 
-/* algorito de ordenamiento V1
+/*
+// algorito de ordenamiento V1
 void	ft_push_swap(t_push_swap *push_swap)
 {
 	t_stack	*min;
@@ -203,6 +204,7 @@ void	ft_push_swap(t_push_swap *push_swap)
 			rb(push_swap);
 		}
 	}
+	//print_push_swap(push_swap);
 	max = ft_stack_max_num(push_swap->b);
 	if (ft_stack_position(push_swap->b, max) < ft_stack_size(max))
 	{
@@ -228,7 +230,7 @@ t_stack	*stack_last(t_stack *stack)
 	return (stack);
 }
 
-t_stack *ft_add_front_new_stack(int content, t_stack *stack)
+t_stack *ft_add_new_last_stack(int content, t_stack *stack)
 {
 	t_stack *new;
 
@@ -236,8 +238,11 @@ t_stack *ft_add_front_new_stack(int content, t_stack *stack)
 	if (new == 0)
 		return (0);
 	new->content = content;
-	new->next = stack;
-	return (new);
+	new->next = 0;
+	if (stack == 0)
+		return (new);
+	stack_last(stack)->next = new;
+	return (stack);
 }
 
 t_push_swap *ft_init_push_swap(void)
@@ -271,7 +276,7 @@ int main(int argc, char **argv)
 	}
 	while (cont < argc)
 	{
-		push_swap->a = ft_add_front_new_stack(ft_atoi(argv[cont]), push_swap->a);
+		push_swap->a = ft_add_new_last_stack(ft_atoi(argv[cont]), push_swap->a);
 		cont++;
 	}
 	ft_push_swap(push_swap);
