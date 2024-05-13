@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/13 13:51:14 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/13 21:27:31 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,6 +132,17 @@ int	ft_stack_position(t_stack *stack, t_stack *element)
 	return (0);
 }
 
+int	is_stack_ordered_min_MAX(t_stack *stack)
+{
+	while (stack->content < stack->next->content)
+	{
+		stack = stack->next;
+		if (stack->next == 0)
+			return (1);
+	}
+	return (0);
+}
+
 /*
 // algorito de ordenamiento V1
 void	ft_push_swap(t_push_swap *push_swap)
@@ -157,6 +168,8 @@ void	ft_push_swap(t_push_swap *push_swap)
 		pa(push_swap);
 }*/
 
+/*
+// algorito de ordenamiento V2
 void	ft_push_swap(t_push_swap *push_swap)
 {
 	t_stack	*min;
@@ -219,6 +232,19 @@ void	ft_push_swap(t_push_swap *push_swap)
 	//print_push_swap(push_swap);
 	while (push_swap->b != 0)
 		pa(push_swap);
+}
+*/
+
+// algorito de ordenamiento V3
+void	ft_push_swap(t_push_swap *push_swap)
+{
+	while (is_stack_ordered_min_MAX(push_swap->a) == 0)
+	{
+		if (push_swap->a->content > push_swap->a->next->content && push_swap->a->next != ft_stack_min_num(push_swap->a))
+			sa(push_swap);
+		else
+			ra(push_swap);
+	}
 }
 
 t_stack	*stack_last(t_stack *stack)
