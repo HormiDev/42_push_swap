@@ -6,11 +6,32 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/12 20:36:13 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/13 01:40:06 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int	ft_get_min_int(int num_arg, ...)
+{
+	va_list	args;
+	int		min;
+	int		tmp;
+	int		cont;
+
+	va_start(args, num_arg);
+	min = va_arg(args, int);
+	cont = 1;
+	while (cont < num_arg)
+	{
+		tmp = va_arg(args, int);
+		if (tmp < min)
+			min = tmp;
+		cont++;
+	}
+	va_end(args);
+	return (min);
+}
 
 void print_push_swap(t_push_swap *push_swap)
 {
@@ -143,29 +164,31 @@ void	ft_push_swap(t_push_swap *push_swap)
 	int min_size;
 	int max_position;
 	int max_size;
+	int min_dintance;
 
 	while (push_swap->a != 0)
 	{
-		print_push_swap(push_swap);
+		//print_push_swap(push_swap);
 		min = ft_stack_min_num(push_swap->a);
 		max = ft_stack_max_num(push_swap->a);
-		min_position= ft_stack_position(push_swap->a, min);
-		printf("stack size: %d\n", ft_stack_size(min));
-		printf("stack position: %d\n", ft_stack_position(push_swap->a, max));
-		printf("stack size: %d\n", ft_stack_size(max));
-		if (ft_stack_position(push_swap->a, min) < ft_stack_size(min))
+		min_position = ft_stack_position(push_swap->a, min);
+		min_size = ft_stack_size(min);
+		max_position = ft_stack_position(push_swap->a, max) + 2;
+		max_size = ft_stack_size(max) + 2;
+		min_dintance = ft_get_min_int(4, min_position, min_size, max_position, max_size);
+		if (min_dintance == min_position)
 		{
 			while (push_swap->a != min)
 				ra(push_swap);
 			pb(push_swap);
 		}
-		else if (ft_stack_size(min) < ft_stack_position(push_swap->a, max + 2))
+		else if (min_dintance == min_size)
 		{
 			while (push_swap->a != min)
 				rra(push_swap);
 			pb(push_swap);
 		}
-		else if (ft_stack_position(push_swap->a, max) < ft_stack_size(max))
+		else if (min_dintance == max_position)
 		{
 			while (push_swap->a != max)
 				ra(push_swap);
@@ -180,7 +203,18 @@ void	ft_push_swap(t_push_swap *push_swap)
 			rb(push_swap);
 		}
 	}
-	print_push_swap(push_swap);
+	max = ft_stack_max_num(push_swap->b);
+	if (ft_stack_position(push_swap->b, max) < ft_stack_size(max))
+	{
+		while (push_swap->b != max)
+			rb(push_swap);
+	}
+	else
+	{
+		while (push_swap->b != max)
+			rrb(push_swap);
+	}
+	//print_push_swap(push_swap);
 	while (push_swap->b != 0)
 		pa(push_swap);
 }
@@ -241,6 +275,7 @@ int main(int argc, char **argv)
 		cont++;
 	}
 	ft_push_swap(push_swap);
+	//print_push_swap(push_swap);
 	ft_free_push_swap(push_swap);
 	return (0);
 }
