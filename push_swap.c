@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/17 14:45:52 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/17 18:19:03 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -194,6 +194,30 @@ int	is_stack_ordered_min_MAX(t_stack *stack)
 	}
 	return (0);
 }
+t_push_swap *ft_duplicate_push_swap(t_push_swap *push_swap)
+{
+	t_push_swap *new;
+	t_stack		*tmp;
+
+	new = malloc(sizeof(t_push_swap));
+	if (new == 0)
+		return (0);
+	tmp = push_swap->a;
+	new->a = 0;
+	while (tmp != 0)
+	{
+		new->a = ft_add_new_last_stack(tmp->content, new->a);
+		if (new->a == 0)
+		{
+			free(new);
+			return (0);
+		}
+		tmp = tmp->next;
+	}
+	tmp = push_swap->b;
+	new->b = 0;
+	return (new);
+}
 
 /*
 // algorito de ordenamiento V1
@@ -286,7 +310,7 @@ void	ft_push_swap(t_push_swap *push_swap)
 		pa(push_swap);
 }
 */
-
+/*
 // algorito de ordenamiento V3
 void	ft_push_swap(t_push_swap *push_swap)
 {
@@ -299,6 +323,20 @@ void	ft_push_swap(t_push_swap *push_swap)
 			ra(push_swap);
 	}
 }
+*/
+
+// algorito de ordenamiento V4 fuerza bruta
+void ft_push_swap(t_push_swap *push_swap)
+{
+	t_push_swap *tmp;
+
+	tmp = ft_duplicate_push_swap(push_swap);
+	while (tmp != 0 && is_stack_ordered_min_MAX(tmp->a) == 0)
+	{
+		
+	}
+}
+
 
 t_stack	*stack_last(t_stack *stack)
 {
