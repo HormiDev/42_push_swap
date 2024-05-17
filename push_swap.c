@@ -6,11 +6,63 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/13 21:27:31 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/17 14:45:52 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+int ft_min_from_num(t_stack *stack, int num)
+{
+	int	min;
+
+	min = 2147483647;
+	while (stack != 0)
+	{
+		if (stack->content > num && min < stack->content)
+			min = stack->content;
+		stack = stack->next;
+	}
+	return (min);
+}
+
+int ft_max_from_num(t_stack *stack, int num)
+{
+	int	max;
+
+	max = -2147483648;
+	while (stack != 0)
+	{
+		if (stack->content <= num && max < stack->content)
+			max = stack->content;
+		stack = stack->next;
+	}
+	return (max);
+}
+
+t_stack	*ft_compress_stack(t_stack *stack)
+{
+	t_stack	*tmp;
+	int		min;
+	int 	cont;
+	
+	min = -2147483648;
+	cont = ft_stack_size(stack);
+	tmp = stack;
+	while (cont > 0)
+	{
+		tmp = ft_min_from_num(stack, min);
+		tmp->content = min;
+		min++;
+		cont--;
+	}
+	while (stack != 0)
+	{
+		stack->content = stack->content + 2147483648;
+		stack = stack->next;
+	}
+	return (tmp);
+}
 
 int	ft_get_min_int(int num_arg, ...)
 {
@@ -240,7 +292,8 @@ void	ft_push_swap(t_push_swap *push_swap)
 {
 	while (is_stack_ordered_min_MAX(push_swap->a) == 0)
 	{
-		if (push_swap->a->content > push_swap->a->next->content && push_swap->a->next != ft_stack_min_num(push_swap->a))
+		if (push_swap->a->content > push_swap->a->next->content && 
+		push_swap->a->next != ft_stack_min_num(push_swap->a))
 			sa(push_swap);
 		else
 			ra(push_swap);
