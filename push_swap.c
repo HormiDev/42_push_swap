@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/17 18:19:03 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/17 20:36:54 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -219,6 +219,145 @@ t_push_swap *ft_duplicate_push_swap(t_push_swap *push_swap)
 	return (new);
 }
 
+t_instructions	*ft_new_instruction(char *instruction)
+{
+	t_instructions	*new;
+
+	new = malloc(sizeof(t_instructions));
+	if (new == 0)
+		return (0);
+	new->instruction = instruction;
+	new->f = &sa;
+	new->next = 0;
+	new->prev = 0;
+	return (new);
+}
+
+void ft_add_last_instruction(t_instructions *instructions, t_instructions *new_instruction)
+{
+	if (instructions == 0)
+		return ;
+	while (instructions->next != 0)
+		instructions = instructions->next;
+	instructions->next = new_instruction;
+	new_instruction->prev = instructions;
+}
+
+void	ft_next_instruction(t_instructions *instruction)
+{
+	if (instruction == 0)
+		return ;
+	if(instruction->instruction == 0)
+	{
+		instruction->instruction = 1;
+		instruction->f = &sb;
+	}
+	else if(instruction->instruction == 1)
+	{
+		instruction->instruction = 2;
+		instruction->f = &ss;
+	}
+	else if(instruction->instruction == 2)
+	{
+		instruction->instruction = 3;
+		instruction->f = &pa;
+	}
+	else if(instruction->instruction == 3)
+	{
+		instruction->instruction = 4;
+		instruction->f = &pb;
+	}
+	else if(instruction->instruction == 4)
+	{
+		instruction->instruction = 5;
+		instruction->f = &ra;
+	}
+	else if(instruction->instruction == 5)
+	{
+		instruction->instruction = 6;
+		instruction->f = &rb;
+	}
+	else if(instruction->instruction == 6)
+	{
+		instruction->instruction = 7;
+		instruction->f = &rr;
+	}
+	else if(instruction->instruction == 7)
+	{
+		instruction->instruction = 8;
+		instruction->f = &rra;
+	}
+	else if(instruction->instruction == 8)
+	{
+		instruction->instruction = 9;
+		instruction->f = &rrb;
+	}
+	else if(instruction->instruction == 9)
+	{
+		instruction->instruction = 10;
+		instruction->f = &rrr;
+	}
+	else if(instruction->instruction == 10)
+	{
+		instruction->instruction = 0;
+		instruction->f = &sa;
+		if (instruction->prev != 0)
+			ft_next_instruction(instruction->prev);
+		else
+			ft_add_last_instruction(instruction, ft_new_instruction(0));
+	}
+}
+
+void	ft_execute_instructions(t_push_swap *push_swap, t_instructions *instructions)
+{
+	while (instructions != 0)
+	{
+		instructions->f(push_swap);
+		instructions = instructions->next;
+	}
+}
+
+void	print_instructions(t_instructions *instructions)
+{
+	while (instructions != 0)
+	{
+		if (instructions->instruction == 0)
+			printf("sa\n");
+		else if (instructions->instruction == 1)
+			printf("sb\n");
+		else if (instructions->instruction == 2)
+			printf("ss\n");
+		else if (instructions->instruction == 3)
+			printf("pa\n");
+		else if (instructions->instruction == 4)
+			printf("pb\n");
+		else if (instructions->instruction == 5)
+			printf("ra\n");
+		else if (instructions->instruction == 6)
+			printf("rb\n");
+		else if (instructions->instruction == 7)
+			printf("rr\n");
+		else if (instructions->instruction == 8)
+			printf("rra\n");
+		else if (instructions->instruction == 9)
+			printf("rrb\n");
+		else if (instructions->instruction == 10)
+			printf("rrr\n");
+		instructions = instructions->next;
+	}
+}
+
+void	ft_free_instructions(t_instructions *instructions)
+{
+	t_instructions *tmp;
+
+	while (instructions != 0)
+	{
+		tmp = instructions;
+		instructions = instructions->next;
+		free(tmp);
+	}
+}
 /*
 // algorito de ordenamiento V1
 void	ft_push_swap(t_push_swap *push_swap)
@@ -329,12 +468,20 @@ void	ft_push_swap(t_push_swap *push_swap)
 void ft_push_swap(t_push_swap *push_swap)
 {
 	t_push_swap *tmp;
+	t_instructions *instructions;
 
 	tmp = ft_duplicate_push_swap(push_swap);
+	instructions = ft_new_instruction(0);
 	while (tmp != 0 && is_stack_ordered_min_MAX(tmp->a) == 0)
 	{
-		
+		ft_free_push_swap(tmp);
+		tmp = ft_duplicate_push_swap(push_swap);
+		ft_execute_instructions(tmp, instructions);
+		ft_next_instruction(instructions);
 	}
+	print_instructions(instructions);
+	ft_free_push_swap(tmp);
+	ft_free_instructions(instructions);
 }
 
 
