@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/17 20:39:27 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/18 17:56:55 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ typedef struct instructions
 {
 	char	instruction;
 	void	(*f)(t_push_swap *push_swap);
-	struct t_instructions	*next;
-	struct t_instructions	*prev;
+	struct instructions	*next;
+	struct instructions	*prev;
 }	t_instructions;
 
 //utils

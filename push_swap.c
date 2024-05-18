@@ -6,11 +6,12 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/17 20:36:54 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/18 20:47:19 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+t_stack *ft_add_new_last_stack(int content, t_stack *stack);
 
 int ft_min_from_num(t_stack *stack, int num)
 {
@@ -26,6 +27,19 @@ int ft_min_from_num(t_stack *stack, int num)
 	return (min);
 }
 
+int	ft_stack_size(t_stack *stack)
+{
+	int	size;
+
+	size = 0;
+	while (stack != 0)
+	{
+		size++;
+		stack = stack->next;
+	}
+	return (size);
+}
+
 int ft_max_from_num(t_stack *stack, int num)
 {
 	int	max;
@@ -39,7 +53,7 @@ int ft_max_from_num(t_stack *stack, int num)
 	}
 	return (max);
 }
-
+/*
 t_stack	*ft_compress_stack(t_stack *stack)
 {
 	t_stack	*tmp;
@@ -62,7 +76,7 @@ t_stack	*ft_compress_stack(t_stack *stack)
 		stack = stack->next;
 	}
 	return (tmp);
-}
+}*/
 
 int	ft_get_min_int(int num_arg, ...)
 {
@@ -126,19 +140,6 @@ void	ft_free_push_swap(t_push_swap *push_swap)
 	free(push_swap);
 }
 
-int	ft_stack_size(t_stack *stack)
-{
-	int	size;
-
-	size = 0;
-	while (stack != 0)
-	{
-		size++;
-		stack = stack->next;
-	}
-	return (size);
-}
-
 t_stack	*ft_stack_min_num(t_stack *stack)
 {
 	t_stack	*min;
@@ -186,6 +187,10 @@ int	ft_stack_position(t_stack *stack, t_stack *element)
 
 int	is_stack_ordered_min_MAX(t_stack *stack)
 {
+	if (stack == 0)
+		return (1);
+	if (stack->next == 0)
+		return (0);
 	while (stack->content < stack->next->content)
 	{
 		stack = stack->next;
@@ -219,7 +224,7 @@ t_push_swap *ft_duplicate_push_swap(t_push_swap *push_swap)
 	return (new);
 }
 
-t_instructions	*ft_new_instruction(char *instruction)
+t_instructions	*ft_new_instruction(char instruction)
 {
 	t_instructions	*new;
 
@@ -233,14 +238,14 @@ t_instructions	*ft_new_instruction(char *instruction)
 	return (new);
 }
 
-void ft_add_last_instruction(t_instructions *instructions, t_instructions *new_instruction)
+void ft_add_last_instruction(t_instructions *instructions, t_instructions *new)
 {
 	if (instructions == 0)
 		return ;
 	while (instructions->next != 0)
 		instructions = instructions->next;
-	instructions->next = new_instruction;
-	new_instruction->prev = instructions;
+	instructions->next = new;
+	new->prev = instructions;
 }
 
 void	ft_next_instruction(t_instructions *instruction)
@@ -301,8 +306,8 @@ void	ft_next_instruction(t_instructions *instruction)
 	{
 		instruction->instruction = 0;
 		instruction->f = &sa;
-		if (instruction->prev != 0)
-			ft_next_instruction(instruction->prev);
+		if (instruction->next != 0)
+			ft_next_instruction(instruction->next);
 		else
 			ft_add_last_instruction(instruction, ft_new_instruction(0));
 	}
@@ -472,12 +477,14 @@ void ft_push_swap(t_push_swap *push_swap)
 
 	tmp = ft_duplicate_push_swap(push_swap);
 	instructions = ft_new_instruction(0);
-	while (tmp != 0 && is_stack_ordered_min_MAX(tmp->a) == 0)
+	while (tmp != 0 && (is_stack_ordered_min_MAX(tmp->a) == 0 || ft_stack_size(tmp->b) != 0))
 	{
+		//print_instructions(instructions);
+		//printf("\n");
 		ft_free_push_swap(tmp);
 		tmp = ft_duplicate_push_swap(push_swap);
-		ft_execute_instructions(tmp, instructions);
 		ft_next_instruction(instructions);
+		ft_execute_instructions(tmp, instructions);
 	}
 	print_instructions(instructions);
 	ft_free_push_swap(tmp);
