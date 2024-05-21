@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/18 17:56:55 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/21 19:20:10 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,5 +62,8 @@ void	rr(t_push_swap *push_swap);
 void	rra(t_push_swap *push_swap);
 void	rrb(t_push_swap *push_swap);
 void	rrr(t_push_swap *push_swap);
+
+//push_swap
+t_push_swap *ft_init_push_swap(void);
 
 #endif
