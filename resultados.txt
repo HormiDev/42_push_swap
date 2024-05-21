@@ -1,0 +1,24 @@
+algoritmo de fuerza bruta
+
+time ./a.out 3 6 1 2 5 9 8
+pb
+pb
+rra
+rra
+sa
+pa
+rra
+pa
+rra
+rra
+./a.out 3 6 1 2 5 9 8  10193,42s user 2,28s system 99% cpu 2:49:57,60 total
+
+time ./a.out 3 6 1 2 5 9  
+pb
+rra
+sa
+rra
+pa
+rra
+rra
+./a.out 3 6 1 2 5 9  7,48s user 0,00s system 99% cpu 7,484 total
