@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:19:36 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/21 22:08:27 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/22 18:25:55 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,16 +31,24 @@ int	ft_check_input(char ***input)
 {
 	int i;
 	int j;
+	int k;
 
+	if (!input)
+		return (0);
 	i = 0;
 	while (input[i])
 	{
 		j = 0;
 		while (input[i][j])
 		{
-			if (!ft_isdigit(input[i][j]) || input[i][j] != " " || 
-				input[i][j] != "-" || input[i][j] != "+")
+			if(input[i][j][k] != '-' && input[i][j][k] != '+' && !ft_isdigit(input[i][j][k]))
 				return (0);
+			k = 1;
+			while (input[i][j][k])
+			{
+				if (!ft_isdigit(input[i][j][k]))
+					return (0);
+			}
 			j++;
 		}
 		i++;
@@ -72,6 +80,7 @@ t_push_swap *parsig(int argc, char **argv)
 {
 	t_push_swap	*ps;
 	int			i;
+	int			j;
 	char		***input; 
 
 	i = 0;
@@ -99,5 +108,4 @@ t_push_swap *parsig(int argc, char **argv)
 		}
 		i++;
 	}
-
 }
