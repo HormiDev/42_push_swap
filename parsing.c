@@ -6,18 +6,18 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:19:36 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/22 18:25:55 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/25 19:15:12 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+# include "push_swap.h"
 
 char	***ft_read_imput(int argc, char **argv)
 {
 	char ***input;
 	int i;
 
-	i = 0;
+	i = 1;
 	input = malloc(sizeof(char **) * argc);
 	while (i < argc)
 	{

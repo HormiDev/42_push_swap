@@ -6,32 +6,29 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 18:43:11 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/05/23 23:16:53 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/05/24 22:33:50 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = push_swap.a
+NAME = push_swap
 
 CC = gcc
 
 CFLAGS = -Wall -Wextra -Werror
 
 SRC =	push_swap.c \
+		parsing.c \
 		push.c \
 		swap.c \
 		rotate.c \
 		reverse_rotate.c \
-		parsing.c \
-		/42_libft/ft_atoi.c \
-		/42_libft/ft_isdigit.c \
-		/42_libft/ft_split.c \
-		
-OBJ = $(SRC:.c=.o)
+		42_Libft/ft_atoi.c \
+		42_Libft/ft_split.c \
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJ)
+$(NAME)
+	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
 
 clean:
 	rm -f $(OBJ)

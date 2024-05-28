@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/20 00:20:54 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/25 18:59:15 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -536,13 +536,13 @@ int main(int argc, char **argv)
 	cont = 1;
 	if (argc < 2)
 	{
-		printf("Error: Faltan argumentos\n");
+		write(1, "Error\n", 6);
 		return (0);
 	}
 	push_swap = ft_init_push_swap();
 	if (push_swap == 0)
 	{
-		printf("Error: No se pudo inicializar push_swap\n");
+		write(1, "Error\n", 6);
 		return (0);
 	}
 	while (cont < argc)
