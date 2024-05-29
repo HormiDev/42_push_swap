@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/24 20:46:19 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/29 16:33:14 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,9 @@ typedef struct instructions
 	struct instructions	*prev;
 }	t_instructions;
 
+//temporales
+void print_push_swap(t_push_swap *push_swap);
+
 //utils
 int		ft_isdigit(int c);
 int		ft_atoi(const char *str);
@@ -66,5 +69,9 @@ void	rrr(t_push_swap *push_swap);
 
 //push_swap
 t_push_swap *ft_init_push_swap(void);
+t_push_swap *parsig(int argc, char **argv);
+t_stack *ft_add_new_last_stack(int content, t_stack *stack);
+void	ft_free_push_swap(t_push_swap *push_swap);
+
 
 #endif
