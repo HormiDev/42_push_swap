@@ -6,7 +6,7 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 18:43:11 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/05/31 17:44:42 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/05/31 19:10:10 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,6 +26,7 @@ SRC =	push_swap.c \
 		swap.c \
 		rotate.c \
 		reverse_rotate.c \
+		ft_push_swap_fb.c \
 
 all: libft
 

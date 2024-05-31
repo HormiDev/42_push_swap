@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   push_swap.c                                        :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/31 17:58:07 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/31 20:06:21 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -469,35 +469,6 @@ void	ft_push_swap(t_push_swap *push_swap)
 }
 */
 
-// algorito de ordenamiento V4 fuerza bruta
-void ft_push_swap_fb(t_push_swap *push_swap)
-{
-	t_push_swap *tmp;
-	t_instructions *instructions;
-
-	tmp = ft_duplicate_push_swap(push_swap);
-	instructions = ft_new_instruction(0);
-	if (tmp == 0 || instructions == 0 || is_stack_ordered_min_MAX(tmp->a))
-	{
-		ft_free_push_swap(tmp);
-		ft_free_instructions(instructions);
-		return ;
-	}
-	while (tmp != 0 && (is_stack_ordered_min_MAX(tmp->a) == 0 || ft_stack_size(tmp->b) != 0))
-	{
-		//print_instructions(instructions);
-		//printf("\n");
-		ft_free_push_swap(tmp);
-		tmp = ft_duplicate_push_swap(push_swap);
-		ft_next_instruction(instructions);
-		ft_execute_instructions(tmp, instructions);
-	}
-	print_instructions(instructions);
-	ft_free_push_swap(tmp);
-	ft_free_instructions(instructions);
-}
-
-
 t_stack	*stack_last(t_stack *stack)
 {
 	if (stack == 0)
@@ -520,18 +491,6 @@ t_stack *ft_add_new_last_stack(int content, t_stack *stack)
 		return (new);
 	stack_last(stack)->next = new;
 	return (stack);
-}
-
-t_push_swap *ft_init_push_swap(void)
-{
-	t_push_swap *push_swap;
-
-	push_swap = malloc(sizeof(t_push_swap));
-	if (push_swap == 0)
-		return (0);
-	push_swap->a = 0;
-	push_swap->b = 0;
-	return (push_swap);
 }
 
 int main(int argc, char **argv)
