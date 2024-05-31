@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 16:43:30 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/02/18 17:49:29 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/05/31 17:20:54 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,9 +80,9 @@ OBJ = $(SRC:.c=.o)
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
 # Regla para construir el archivo de salida
-all: $(NAME)
+all: build
 
-$(NAME): $(OBJ)
+build: $(OBJ)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 	ranlib $(NAME)
 
@@ -95,16 +95,13 @@ bonus: $(OBJ_BONUS)
 	$(AR) $(ARFLAGS) $(NAME) $(OBJ_BONUS)
 	ranlib $(NAME)
 
-# Alias para la regla all
-libft.a: $(NAME)
-
 # Regla para limpiar los archivos objeto
 clean:
 	rm -f $(OBJ) $(OBJ_BONUS)
 
 # Regla para limpiar los archivos objeto y el archivo de salida
 fclean:
-	rm -f $(OBJ) $(NAME)
+	rm -f $(OBJ) $(OBJ_BONUS) $(NAME)
 
 # Regla para reconstruir el proyecto desde cero
 re: fclean all

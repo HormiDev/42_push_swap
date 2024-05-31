@@ -6,15 +6,19 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 18:43:11 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/05/24 22:33:50 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/05/31 17:44:42 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
 
-CC = gcc
+CC = cc
 
 CFLAGS = -Wall -Wextra -Werror
+
+AR = ar
+
+ARFLAGS = -rcs
 
 SRC =	push_swap.c \
 		parsing.c \
@@ -22,20 +26,18 @@ SRC =	push_swap.c \
 		swap.c \
 		rotate.c \
 		reverse_rotate.c \
-		42_Libft/ft_atoi.c \
-		42_Libft/ft_split.c \
 
-all: $(NAME)
+all: libft
 
-$(NAME)
-	$(CC) $(CFLAGS) $(SRC) -o $(NAME)
+clean: libft_fclean
 
-clean:
-	rm -f $(OBJ)
 
-fclean: clean
-	rm -f $(NAME)
 
-re: fclean all
+libft:
+	make -C 42_Libft
 
-.PHONY: all clean fclean re
+libft_fclean:
+	make fclean -C 42_Libft
+
+push_swap: $(SRC)
+	$(CC) $(CFLAGS) -o $(NAME) $(SRC)

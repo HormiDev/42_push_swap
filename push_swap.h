@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/29 16:33:14 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/31 17:58:40 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,9 @@ t_push_swap *ft_init_push_swap(void);
 t_push_swap *parsig(int argc, char **argv);
 t_stack *ft_add_new_last_stack(int content, t_stack *stack);
 void	ft_free_push_swap(t_push_swap *push_swap);
+
+//algorintms
+void ft_push_swap_fb(t_push_swap *push_swap);
 
 
 #endif

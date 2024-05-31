@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/29 16:32:45 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/05/31 17:58:07 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -470,13 +470,19 @@ void	ft_push_swap(t_push_swap *push_swap)
 */
 
 // algorito de ordenamiento V4 fuerza bruta
-void ft_push_swap(t_push_swap *push_swap)
+void ft_push_swap_fb(t_push_swap *push_swap)
 {
 	t_push_swap *tmp;
 	t_instructions *instructions;
 
 	tmp = ft_duplicate_push_swap(push_swap);
 	instructions = ft_new_instruction(0);
+	if (tmp == 0 || instructions == 0 || is_stack_ordered_min_MAX(tmp->a))
+	{
+		ft_free_push_swap(tmp);
+		ft_free_instructions(instructions);
+		return ;
+	}
 	while (tmp != 0 && (is_stack_ordered_min_MAX(tmp->a) == 0 || ft_stack_size(tmp->b) != 0))
 	{
 		//print_instructions(instructions);
@@ -542,7 +548,7 @@ int main(int argc, char **argv)
 	push_swap = parsig(argc, argv);
 	if (push_swap == 0)
 		return (0);
-	ft_push_swap(push_swap);
+	ft_push_swap_fb(push_swap);
 	//print_push_swap(push_swap);
 	ft_free_push_swap(push_swap);
 	return (0);
