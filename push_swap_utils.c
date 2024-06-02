@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_init_push_swap.c                                :+:      :+:    :+:   */
+/*   push_swap_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/31 20:06:01 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/31 20:06:44 by ide-dieg         ###   ########.fr       */
+/*   Created: 2024/06/03 01:16:47 by ide-dieg          #+#    #+#             */
+/*   Updated: 2024/06/03 01:19:50 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_push_swap *ft_init_push_swap(void)
+int	ft_get_min_int(int num_arg, ...)
 {
-	t_push_swap *push_swap;
+	va_list	args;
+	int		min;
+	int		tmp;
+	int		cont;
 
-	push_swap = malloc(sizeof(t_push_swap));
-	if (push_swap == 0)
-		return (0);
-	push_swap->a = 0;
-	push_swap->b = 0;
-	return (push_swap);
+	va_start(args, num_arg);
+	min = va_arg(args, int);
+	cont = 1;
+	while (cont < num_arg)
+	{
+		tmp = va_arg(args, int);
+		if (tmp < min)
+			min = tmp;
+		cont++;
+	}
+	va_end(args);
+	return (min);
 }

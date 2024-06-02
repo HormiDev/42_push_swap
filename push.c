@@ -6,13 +6,13 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 21:28:51 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/18 17:59:50 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/02 20:38:39 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	push(t_stack **stack_a, t_stack **stack_b)
+static void	push(t_stack **stack_a, t_stack **stack_b)
 {
 	t_stack	*tmp;
 

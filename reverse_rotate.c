@@ -6,13 +6,13 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 23:50:31 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/18 17:59:56 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/02 20:38:13 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-t_stack	*reverse_rotate(t_stack *stack)
+static t_stack	*reverse_rotate(t_stack *stack)
 {
 	t_stack	*tmp;
 
