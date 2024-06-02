@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/05/31 19:08:14 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/02 20:05:51 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,5 +76,15 @@ void	ft_free_push_swap(t_push_swap *push_swap);
 //algorintms
 void ft_push_swap_fb(t_push_swap *push_swap);
 
+//input
+char ***ft_read_imput(int narg, char **argv);
+int	ft_check_input(char ***input);
+void	ft_free_input(char ***input);
+
+//funciones de prueba (comentar)
+void print_stack(t_stack *stack);
+void print_instructions(t_instructions *instructions);
+void print_push_swap(t_push_swap *push_swap);
+void print_input(char ***input);
 
 #endif
