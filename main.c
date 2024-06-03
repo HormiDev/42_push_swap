@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/03 01:19:31 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/03 18:53:17 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,9 +145,7 @@ void	ft_push_swap(t_push_swap *push_swap)
 int main(int argc, char **argv)
 {
 	t_push_swap *push_swap;
-	int cont;
 
-	cont = 1;
 	if (argc < 2)
 	{
 		write(1, "Error\n", 6);

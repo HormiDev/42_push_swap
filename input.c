@@ -6,9 +6,11 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 19:52:26 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/02 20:23:02 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/03 16:33:38 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "push_swap.h"
 
 char	***ft_read_imput(int narg, char **argv)
 {

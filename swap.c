@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/06 19:57:45 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/02 20:38:03 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/03 19:01:25 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,18 +27,15 @@ static t_stack	*swap(t_stack *stack)
 void	sa(t_push_swap *push_swap)
 {
 	push_swap->a = swap(push_swap->a);
-	//printf("sa\n");
 }
 
 void	sb(t_push_swap *push_swap)
 {
 	push_swap->b = swap(push_swap->b);
-	//printf("sb\n");
 }
 
 void	ss(t_push_swap *push_swap)
 {
 	push_swap->a = swap(push_swap->a);
 	push_swap->b = swap(push_swap->b);
-	//printf("ss\n");
 }
