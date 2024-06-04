@@ -6,7 +6,7 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 18:43:11 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/06/03 22:47:08 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/06/04 03:06:57 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ ARFLAGS = -rcs
 
 SRC =	main.c \
 		ft_push_swap_fb.c \
+		ft_push_swap_v1.c \
 		fts_t_instructions.c \
 		fts_t_instructions2.c \
 		fts_t_push_swap.c \
@@ -52,3 +53,5 @@ libft_fclean:
 
 push_swap:
 	$(CC) $(CFLAGS) $(SRC) 42_Libft/libft.a -o $(NAME)
+
+re: fclean all
