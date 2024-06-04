@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/03 19:05:49 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 00:38:37 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,6 +86,7 @@ void			ft_execute_instructions(t_push_swap *push_swap,
 					t_instructions *instructions);
 void			print_instructions(t_instructions *instructions);
 void			ft_next_instruction(t_instructions *instruction);
+void			*select_function_for_instruction(char instruction);
 
 //t_stack
 t_stack			*ft_add_new_last_stack(int content, t_stack *stack);

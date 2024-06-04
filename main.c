@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/03 18:53:17 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/03 23:37:46 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,18 +128,7 @@ void	ft_push_swap(t_push_swap *push_swap)
 }
 */
 /*
-// algorito de ordenamiento V3
-void	ft_push_swap(t_push_swap *push_swap)
-{
-	while (is_stack_ordered_min_MAX(push_swap->a) == 0)
-	{
-		if (push_swap->a->content > push_swap->a->next->content && 
-		push_swap->a->next != ft_stack_min_num(push_swap->a))
-			sa(push_swap);
-		else
-			ra(push_swap);
-	}
-}
+
 */
 
 int main(int argc, char **argv)
