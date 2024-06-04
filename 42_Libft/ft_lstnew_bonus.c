@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 18:13:54 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 05:49:13 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:47:16 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Finalmente, la función devuelve un puntero al nuevo nodo.
 
 Este código es un patrón común en C para crear una nueva estructura y asignarle 
 valores iniciales.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main()
 {

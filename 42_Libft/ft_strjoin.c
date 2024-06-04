@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 03:57:53 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 04:30:55 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:48:32 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,7 +53,7 @@ toma tres argumentos similares a 'ft_strlcpy'. En este caso, el tamaño máximo
 es la suma de las longitudes de 's1' y 's2' más 1.
 
 Finalmente, la función 'ft_strjoin' devuelve el puntero a la cadena concatenada.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main()
 {

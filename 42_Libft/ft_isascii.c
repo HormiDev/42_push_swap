@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 12:43:35 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 00:02:42 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:10 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ rango, significa que es un carácter ASCII, por lo que la función devuelve 1.
 Si 'c' no está en este rango, significa que no es un carácter ASCII, por lo 
 que la función devuelve 0. En resumen, 'ft_isascii' devuelve 1 si el carácter 
 está en la tabla ASCII y 0 si no lo está.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <unistd.h>
 #include <ctype.h>

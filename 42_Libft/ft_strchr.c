@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 16:49:32 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 13:36:45 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:48:17 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ el carácter nulo siempre está en la cadena.
 
 Si 'cchar' no es el carácter nulo y no se encontró en la cadena, la función 
 devuelve un puntero nulo (0), indicando que no se encontró el carácter buscado.
-*******************************************************************************/
+******************************************************************************/
 
 /*
 #include <stdio.h>

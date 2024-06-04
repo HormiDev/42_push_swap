@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 17:47:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:56:11 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:48:40 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ de destino para asegurarse de que esté correctamente terminada.
 Finalmente, la función devuelve la longitud de la cadena de origen. Esto es 
 útil porque permite a los llamadores de la función saber si la cadena de 
 origen se truncó al copiarla a la cadena de destino.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <string.h>
 

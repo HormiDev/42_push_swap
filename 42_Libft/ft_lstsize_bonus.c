@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 21:19:34 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 05:56:53 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:47:26 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ función retorna el contador, que es el número de nodos en la lista.
 
 En resumen, esta función recorre una lista enlazada y retorna el número de 
 nodos en la lista. Si la lista está vacía, la función retorna 0.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main()
 {

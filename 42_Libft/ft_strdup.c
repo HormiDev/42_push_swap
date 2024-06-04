@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/03 23:04:19 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:55:57 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:48:23 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ cadena para indicar el final de la cadena.
 
 Finalmente, la función 'ft_strdup' devuelve el puntero a la nueva cadena 
 duplicada.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <stdio.h>
 #include <string.h>

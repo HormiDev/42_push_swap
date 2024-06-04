@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 16:08:57 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 00:02:36 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:07 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ significa que es un carácter alfabético, por lo que la función devuelve 1.
 Si 'c' no está en ninguno de estos rangos, significa que no es un carácter 
 alfabético, por lo que la función devuelve 0. En resumen, 'ft_isalpha' devuelve 
 1 si el carácter es alfabético y 0 si no lo es.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <unistd.h>
 #include <ctype.h>

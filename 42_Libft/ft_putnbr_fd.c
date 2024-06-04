@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 23:55:19 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/12 01:02:58 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:47:59 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ Cuando todas las llamadas a 'write' y 'ft_putchar_fd' terminan, la función
 retorna. No devuelve ningún valor porque su tipo de retorno es void. Esto 
 significa que su objetivo principal es realizar una acción (escribir un número 
 en un descriptor de archivo) en lugar de producir un nuevo valor.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <fcntl.h>
 

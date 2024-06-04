@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 19:21:40 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/11 20:18:42 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:48:27 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ carácter en 's'. Luego, decrementa 'len' en uno.
 Cuando el bucle termina, la función retorna. No devuelve ningún valor porque su 
 tipo de retorno es void. Esto significa que su objetivo principal es modificar 
 's' en lugar de producir un nuevo valor.
-*******************************************************************************/
+******************************************************************************/
 /*
 void incrementchar(unsigned int num, char *a)
 {

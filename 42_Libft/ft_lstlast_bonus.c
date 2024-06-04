@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 21:35:13 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 06:34:58 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:53 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ es el último nodo de la lista. En este punto, la función retorna un puntero al
 
 En resumen, esta función recorre una lista enlazada y retorna un puntero al 
 último nodo. Si la lista está vacía, la función retorna NULL.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main()
 {

@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/04 02:56:52 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:51:39 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,101 +35,6 @@ t_stack	*ft_compress_stack(t_stack *stack)
 	}
 	return (tmp);
 }*/
-
-/*
-// algorito de ordenamiento V1
-void	ft_push_swap(t_push_swap *push_swap)
-{
-	t_stack	*min;
-
-	while (push_swap->a != 0)
-	{
-		min = ft_stack_min_num(push_swap->a);
-		if (ft_stack_position(push_swap->a, min) < ft_stack_size(min))
-		{
-			while (push_swap->a != min)
-				ra(push_swap);
-		}
-		else
-		{
-			while (push_swap->a != min)
-				rra(push_swap);
-		}
-		pb(push_swap);
-	}
-	while (push_swap->b != 0)
-		pa(push_swap);
-}*/
-
-/*
-// algorito de ordenamiento V2
-void	ft_push_swap(t_push_swap *push_swap)
-{
-	t_stack	*min;
-	t_stack	*max;
-	int min_position;
-	int min_size;
-	int max_position;
-	int max_size;
-	int min_dintance;
-
-	while (push_swap->a != 0)
-	{
-		//print_push_swap(push_swap);
-		min = ft_stack_min_num(push_swap->a);
-		max = ft_stack_max_num(push_swap->a);
-		min_position = ft_stack_position(push_swap->a, min);
-		min_size = ft_stack_size(min);
-		max_position = ft_stack_position(push_swap->a, max) + 2;
-		max_size = ft_stack_size(max) + 2;
-		min_dintance = ft_get_min_int(4, min_position, min_size, max_position, max_size);
-		if (min_dintance == min_position)
-		{
-			while (push_swap->a != min)
-				ra(push_swap);
-			pb(push_swap);
-		}
-		else if (min_dintance == min_size)
-		{
-			while (push_swap->a != min)
-				rra(push_swap);
-			pb(push_swap);
-		}
-		else if (min_dintance == max_position)
-		{
-			while (push_swap->a != max)
-				ra(push_swap);
-			pb(push_swap);
-			rb(push_swap);
-		}
-		else
-		{
-			while (push_swap->a != max)
-				rra(push_swap);
-			pb(push_swap);
-			rb(push_swap);
-		}
-	}
-	//print_push_swap(push_swap);
-	max = ft_stack_max_num(push_swap->b);
-	if (ft_stack_position(push_swap->b, max) < ft_stack_size(max))
-	{
-		while (push_swap->b != max)
-			rb(push_swap);
-	}
-	else
-	{
-		while (push_swap->b != max)
-			rrb(push_swap);
-	}
-	//print_push_swap(push_swap);
-	while (push_swap->b != 0)
-		pa(push_swap);
-}
-*/
-/*
-
-*/
 
 int main(int argc, char **argv)
 {

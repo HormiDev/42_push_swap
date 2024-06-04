@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 05:19:00 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/06 21:13:54 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:49:09 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ Finalmente, la función 'ft_substr' se utiliza para extraer la subcadena de 's1'
 desde 'inicio' hasta 'fin' - 'inicio'. Esta subcadena es la cadena 's1' con los 
 caracteres de 'set' recortados del inicio y del final. Esta subcadena se 
 devuelve como resultado de la función 'ft_strtrim'.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main()
 {

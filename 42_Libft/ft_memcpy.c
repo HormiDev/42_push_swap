@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 17:17:18 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:54:22 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:47:37 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ inicio de la zona de memoria a la que se copiaron los datos.
 
 En resumen, 'ft_memcpy' copia los primeros 'n' bytes de una zona de memoria a 
 otra, y devuelve un puntero a la zona de memoria de destino.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <string.h>
 

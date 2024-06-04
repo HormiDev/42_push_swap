@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 17:33:05 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 06:16:24 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:39 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ lista en NULL (lst[0] = 0;), indicando que la lista está ahora vacía.
 En resumen, esta función borra todos los nodos de una lista enlazada y libera 
 la memoria que ocupaban, utilizando una función de borrado proporcionada por el 
 usuario.
-*******************************************************************************/
+******************************************************************************/
 /*
 void del(void *content)
 {

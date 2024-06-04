@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 13:01:39 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 00:02:56 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:17 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ devuelve 1.
 Si 'c' no está en este rango, significa que no es un dígito numérico, por lo 
 que la función devuelve 0. En resumen, 'ft_isdigit' devuelve 1 si el carácter 
 es un dígito numérico y 0 si no lo es.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <unistd.h>
 #include <ctype.h>

@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 21:59:25 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:56:06 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:48:36 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ En resumen, 'ft_strlcat' concatena de manera segura una cadena a otra,
 asegurándose de que la cadena de destino no se desborde y siempre esté 
 terminada por '\0', y devuelve la longitud total de la cadena que se habría 
 creado si la cadena de destino hubiera sido lo suficientemente grande.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <string.h>
 

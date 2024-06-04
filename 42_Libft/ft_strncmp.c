@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 19:51:01 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:56:24 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:48:54 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ continúa con el siguiente carácter.
 Si el bucle termina sin encontrar diferencias entre los caracteres de las 
 cadenas, la función devuelve 0, lo que indica que las cadenas son iguales 
 hasta los primeros 'n' caracteres.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <stdio.h>
 #include <string.h>

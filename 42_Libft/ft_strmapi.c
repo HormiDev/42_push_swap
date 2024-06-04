@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 22:51:53 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/11 19:17:35 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:48:48 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,7 @@ Cuando el bucle termina, devuelve 'str', que es la nueva cadena creada
 aplicando 'f' a cada carácter de 's'.
 
 Si la asignación de memoria para 'str' no es exitosa, la función devuelve 0.
-*******************************************************************************/
+******************************************************************************/
 /*
 char incrementchar(unsigned int num, char a)
 {

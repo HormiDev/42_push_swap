@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 12:15:46 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:56:17 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:48:45 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ Finalmente, la función devuelve 'cont', que es la longitud de la cadena 'str'.
 
 En resumen, 'ft_strlen' calcula y devuelve la longitud de una cadena, sin 
 incluir el carácter nulo final.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <string.h>
 

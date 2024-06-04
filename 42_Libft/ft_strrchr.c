@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 19:40:02 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 13:28:12 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:49:05 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ nulo ('\0'). Si es así, devuelve un puntero al final de la cadena. De lo c
 ontrario, devuelve el valor de 'resultado', que es un puntero a la última 
 aparición del carácter buscado en la cadena, o NULL si el carácter no se 
 encontró en la cadena.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <stdio.h>
 #include <string.h>

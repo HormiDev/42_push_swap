@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:31:34 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 00:04:30 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:49:15 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ cambios.
 
 En resumen, 'ft_tolower' convierte un carácter en mayúscula a minúscula, y si 
 el carácter ya está en minúscula o no es una letra, lo devuelve sin cambios.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <unistd.h>
 #include <ctype.h>

@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/13 21:04:54 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 06:21:53 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:34 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ se convierte en el primer nodo de la lista.
 
 En resumen, esta función añade un nuevo nodo al principio de una lista 
 enlazada, desplazando todos los otros nodos hacia abajo en la lista.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main()
 {

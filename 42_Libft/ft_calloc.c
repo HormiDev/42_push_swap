@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/02 18:07:42 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 14:03:15 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:00 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ inicializa toda la memoria asignada.
 
 Finalmente, la función 'ft_calloc' devuelve el puntero a la memoria asignada e 
 inicializada.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main() {
     int n = 5;

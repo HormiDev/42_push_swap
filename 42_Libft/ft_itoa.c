@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/08 19:44:25 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 07:21:25 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:50:38 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ eliminar el último dígito. También decrementa 'len' en uno.
 
 Cuando el bucle termina, la función devuelve 'str', que es la representación 
 de cadena del número entero 'n'.
-*******************************************************************************/
+******************************************************************************/
 
 static int	ft_intlen(int n)
 {
@@ -108,7 +108,7 @@ dígitos hay en total.
 
 Cuando el bucle termina, la función devuelve 'len', que es la longitud del 
 número entero 'n'.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main()
 {

@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/11 18:04:42 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 00:04:36 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:49:19 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ cambios.
 
 En resumen, 'ft_toupper' convierte un carácter en minúscula a mayúscula, y si 
 el carácter ya está en mayúscula o no es una letra, lo devuelve sin cambios.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <unistd.h>
 #include <ctype.h>

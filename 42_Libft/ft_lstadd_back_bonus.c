@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 16:52:07 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 06:27:10 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:29 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ convierte en el primer (y único) nodo de la lista.
 En resumen, esta función añade un nuevo nodo al final de una lista enlazada, 
 manejando correctamente los casos en que la lista está vacía o el nuevo nodo es 
 NULL.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main()
 {

@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 23:47:24 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/03 00:27:08 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:02:22 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static void	ft_next_instruction3(t_instructions *instruction)
 		if (instruction->next != 0)
 			ft_next_instruction(instruction->next);
 		else
-			ft_add_last_instruction(instruction, ft_new_instruction(0));
+			ft_add_last_instruction(&instruction, ft_new_instruction(0));
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/19 18:07:46 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:54:27 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:47:42 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ inicio de la zona de memoria a la que se copiaron los datos.
 En resumen, 'ft_memmove' copia los primeros 'len' bytes de una zona de memoria 
 a otra, manejando correctamente los casos en los que las zonas de memoria se 
 superponen.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <string.h>
 

@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/23 01:52:07 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 00:02:07 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:45:48 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ lo que asegura que el número tenga el signo correcto.
 En resumen, 'ft_atoi' convierte una cadena de caracteres que representa un 
 número entero en su equivalente numérico, teniendo en cuenta los espacios en 
 blanco iniciales y el signo del número.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <stdlib.h>
 

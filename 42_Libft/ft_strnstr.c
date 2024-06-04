@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 19:18:38 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:56:30 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:49:01 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,7 @@ del rango especificado por 'len', la función devuelve 0.
 En resumen, 'ft_strnstr' busca la primera aparición de una cadena en otra 
 dentro de un rango especificado y devuelve un puntero al inicio de esta 
 aparición, o 0 si no se encuentra la cadena.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <string.h>
 

@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 22:27:05 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 06:55:02 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:48 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ En resumen, esta función recorre una lista enlazada y aplica una función
 proporcionada por el usuario a cada elemento de la lista. La recursión se 
 utiliza para recorrer la lista, y la función se aplica a los elementos de la 
 lista en orden inverso (desde el último al primero).
-*******************************************************************************/
+******************************************************************************/
 /*
 void increment(void *content)
 {

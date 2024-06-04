@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/12 20:01:56 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:54:40 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:47:46 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ inicio de la zona de memoria que se llenó.
 
 En resumen, 'ft_memset' llena los primeros 'len' bytes de una zona de memoria 
 con un byte específico y devuelve un puntero a esta zona de memoria.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <string.h>
 

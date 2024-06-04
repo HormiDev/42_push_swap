@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/05 16:42:29 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 07:24:23 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:50:15 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ Si la asignación de memoria para 'matriz' es exitosa, llama a la función
 resultado. Donde se realiza la división real de la cadena en palabras.
 
 Si la asignación de memoria para 'matriz' no es exitosa, la función devuelve 0.
-*******************************************************************************/
+******************************************************************************/
 
 static char	**ft_split2(char const *s, char c, char	**matriz, size_t len)
 {
@@ -107,7 +107,7 @@ uno. Si no, llama a la función 'liberate' para liberar la memoria asignada para
 
 Después de eso, incrementa 'cont' en uno. Cuando el bucle termina, establece el 
 último elemento de 'matriz' en 0 y devuelve 'matriz'.
-*******************************************************************************/
+******************************************************************************/
 
 static int	ft_strworlds(char const *s, char c)
 {
@@ -152,7 +152,7 @@ en uno.
 
 Cuando el bucle termina, la función devuelve 'palabras', que es el número de 
 palabras en 's' que están separadas por el carácter 'c'.
-*******************************************************************************/
+******************************************************************************/
 
 static void	liberate(char **matriz, int nstr)
 {
@@ -177,7 +177,7 @@ cadena en 'matriz'.
 
 Después de que todas las cadenas en 'matriz' han sido liberadas, libera la 
 memoria asignada a 'matriz' en sí.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main()
 {
@@ -267,4 +267,4 @@ Después de eso, incrementa 'cont' en uno. Cuando el bucle termina, establece
 el último elemento de 'matriz' en 0 y devuelve 'matriz'.
 
 Si la asignación de memoria para 'matriz' no es exitosa, la función devuelve 0.
-*******************************************************************************/
+******************************************************************************/

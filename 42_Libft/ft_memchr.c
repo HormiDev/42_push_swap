@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 16:32:50 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:54:15 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:47:30 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ con el siguiente byte.
 Si el bucle termina sin encontrar 'c' en la zona de memoria, la función 
 devuelve 0, lo que indica que 'c' no se encontró en los primeros 'n' bytes de 
 la zona de memoria.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <string.h>
 

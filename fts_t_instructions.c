@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 21:34:00 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/04 03:42:29 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:07:02 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,15 +26,21 @@ t_instructions	*ft_new_instruction(char instruction)
 	return (new);
 }
 
-void	ft_add_last_instruction(t_instructions *instructions,
+void	ft_add_last_instruction(t_instructions **instructions,
 		t_instructions *new)
 {
-	if (instructions == 0)
+	t_instructions	*tmp;
+
+	if (*instructions == 0)
+	{
+		*instructions = new;
 		return ;
-	while (instructions->next != 0)
-		instructions = instructions->next;
-	instructions->next = new;
-	new->prev = instructions;
+	}
+	tmp = *instructions;
+	while (tmp->next != 0)
+		tmp = tmp->next;
+	tmp->next = new;
+	new->prev = tmp;
 }
 
 void	ft_free_instructions(t_instructions *instructions)

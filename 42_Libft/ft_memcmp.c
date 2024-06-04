@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/18 19:52:21 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 09:54:19 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:47:34 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,7 @@ siguiente byte.
 Si el bucle termina sin encontrar diferencias entre los bytes de las zonas de 
 memoria, la función devuelve 0, lo que indica que las zonas de memoria son 
 iguales hasta los primeros 'n' bytes.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <string.h>
 

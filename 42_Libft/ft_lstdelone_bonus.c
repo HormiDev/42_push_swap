@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 17:03:02 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 06:50:23 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:43 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ como argumento (free(lst);).
 En resumen, esta función borra un nodo de una lista enlazada y libera la 
 memoria que ocupaba, utilizando una función de borrado proporcionada por el 
 usuario.
-*******************************************************************************/
+******************************************************************************/
 /*
 void del(void *content)
 {

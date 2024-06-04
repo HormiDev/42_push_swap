@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/08 18:29:33 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 00:02:27 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:46:03 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ rango, significa que es un dígito, por lo que la función también devuelve 1.
 
 Si 'c' no es ni una letra ni un dígito, la función devuelve 0. En resumen, 
 'ft_isalnum' devuelve 1 si el carácter es alfanumérico y 0 si no lo es.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <unistd.h>
 #include <ctype.h>

@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/04 01:41:28 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/06 21:48:59 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:49:12 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ Si la asignación de memoria tiene éxito, la función entra en un bucle while q
 copia 'len' caracteres de 's' a 'str', comenzando desde el índice 'start'. 
 Finalmente, la función agrega un carácter nulo al final de 'str' y devuelve 
 'str'.
-*******************************************************************************/
+******************************************************************************/
 /*
 int main()
 {

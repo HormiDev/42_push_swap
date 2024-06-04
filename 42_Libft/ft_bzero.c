@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/13 16:19:59 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/04 00:02:14 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:45:54 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ se incrementa 'cont'.
 
 En resumen, 'ft_bzero' establece los primeros 'n' bytes de la zona de memoria 
 apuntada por 's' a cero.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <strings.h>
 

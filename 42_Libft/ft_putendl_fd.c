@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/11 23:44:13 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/11 23:53:44 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:47:55 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Cuando las dos llamadas a 'write' terminan, la función retorna. No devuelve
 ningún valor porque su tipo de retorno es void. Esto significa que su objetivo 
 principal es realizar una acción (escribir una cadena y un salto de línea en un 
 descriptor de archivo) en lugar de producir un nuevo valor.
-*******************************************************************************/
+******************************************************************************/
 /*
 #include <fcntl.h>
 

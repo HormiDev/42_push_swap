@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/14 22:43:19 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/02/18 07:14:43 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 13:47:13 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ primer nodo de la nueva lista.
 En resumen, esta función crea una nueva lista enlazada aplicando una función 
 proporcionada por el usuario a cada elemento de una lista existente, y maneja 
 correctamente los casos en que la creación de un nuevo nodo falla.
-*******************************************************************************/
+******************************************************************************/
 /*
 void *increment(void *content)
 {
@@ -201,4 +201,4 @@ primer nodo de la nueva lista.
 En resumen, esta función crea una nueva lista enlazada aplicando una función 
 proporcionada por el usuario a cada elemento de una lista existente, y maneja 
 correctamente los casos en que la creación de un nuevo nodo falla.
-*******************************************************************************/
+******************************************************************************/
