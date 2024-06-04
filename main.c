@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/04 13:51:39 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/04 23:12:00 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,10 +35,9 @@ t_stack	*ft_compress_stack(t_stack *stack)
 	}
 	return (tmp);
 }*/
-
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
-	t_push_swap *push_swap;
+	t_push_swap	*push_swap;
 
 	if (argc < 2)
 	{
@@ -51,7 +50,7 @@ int main(int argc, char **argv)
 	if (ft_stack_size(push_swap->a) < 6)
 		ft_push_swap_fb(push_swap);
 	else
-		ft_push_swap_v1(push_swap);
+		ft_push_swap_v3(push_swap);
 	ft_free_push_swap(push_swap);
 	return (0);
 }
