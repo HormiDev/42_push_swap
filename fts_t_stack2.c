@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 01:09:20 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/03 01:14:50 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/10 14:09:49 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,30 +40,48 @@ t_stack	*ft_stack_max_num(t_stack *stack)
 	return (max);
 }
 
-int	ft_min_from_num(t_stack *stack, int num)
+t_stack	*ft_min_stack_from_num(t_stack *stack, int num)
 {
-	int	min;
+	t_stack	*min;
 
-	min = 2147483647;
+	min = stack;
 	while (stack != 0)
 	{
-		if (stack->content > num && min < stack->content)
-			min = stack->content;
+		if (stack->content >= num && stack->content < min->content)
+			min = stack;
 		stack = stack->next;
 	}
 	return (min);
 }
 
-int	ft_max_from_num(t_stack *stack, int num)
+t_stack	*ft_max_stack_from_num(t_stack *stack, int num)
 {
-	int	max;
+	t_stack	*max;
 
-	max = -2147483648;
+	max = stack;
 	while (stack != 0)
 	{
-		if (stack->content <= num && max < stack->content)
-			max = stack->content;
+		if (stack->content <= num && stack->content > max->content)
+			max = stack;
 		stack = stack->next;
 	}
 	return (max);
+}
+
+t_stack	*ft_compress_stack(t_stack *stack)
+{
+	t_stack	*tmp;
+	int		min;
+	int		cont;
+
+	min = -2147483648;
+	cont = ft_stack_size(stack);
+	while (cont > 0)
+	{
+		tmp = ft_min_stack_from_num(stack, min);
+		tmp->content = min;
+		min++;
+		cont--;
+	}
+	return (tmp);
 }

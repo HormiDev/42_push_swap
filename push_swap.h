@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/04 22:58:31 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/10 14:07:45 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,7 +99,8 @@ int				is_stack_ordered_min_max(t_stack *stack);
 int				ft_stack_position(t_stack *stack, t_stack *element);
 t_stack			*ft_stack_min_num(t_stack *stack);
 t_stack			*ft_stack_max_num(t_stack *stack);
-int				ft_min_from_num(t_stack *stack, int num);
-int				ft_max_from_num(t_stack *stack, int num);
+t_stack			*ft_min_stack_from_num(t_stack *stack, int num);
+t_stack			*ft_max_stack_from_num(t_stack *stack, int num);
+t_stack			*ft_compress_stack(t_stack *stack);
 
 #endif

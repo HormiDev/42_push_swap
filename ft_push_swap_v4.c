@@ -1,34 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_push_swap_v4.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/10 14:16:05 by ide-dieg         ###   ########.fr       */
+/*   Created: 2024/06/10 13:39:04 by ide-dieg          #+#    #+#             */
+/*   Updated: 2024/06/10 14:11:14 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+// algorito de ordenamiento V4
+void	ft_push_swap_v4(t_push_swap *push_swap)
 {
-	t_push_swap	*push_swap;
-
-	if (argc < 2)
-	{
-		write(1, "Error\n", 6);
-		return (0);
-	}
-	push_swap = parsig(argc, argv);
-	ft_compress_stack(push_swap->a);
-	if (push_swap == 0)
-		return (0);
-	if (ft_stack_size(push_swap->a) < 11)
-		ft_push_swap_fb(push_swap);
-	else
-		ft_push_swap_v3(push_swap);
-	ft_free_push_swap(push_swap);
-	return (0);
+	
 }
