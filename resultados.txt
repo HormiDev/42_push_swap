@@ -22,3 +22,7 @@ pa
 rra
 rra
 ./a.out 3 6 1 2 5 9  7,48s user 0,00s system 99% cpu 7,484 total
+
+5 15722
+10 9299
+50 2764
