@@ -6,7 +6,7 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 18:43:11 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/06/10 16:25:45 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/06/12 13:15:33 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,7 @@ SRC =	main.c \
 		fts_t_push_swap.c \
 		fts_t_stack.c \
 		fts_t_stack2.c \
+		fts_t_stack3.c \
 		input.c \
 		parsing.c \
 		push_swap_utils.c \

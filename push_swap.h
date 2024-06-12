@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/10 16:25:35 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/12 13:14:33 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,6 +64,7 @@ t_push_swap		*parsig(int argc, char **argv);
 t_stack			*ft_add_new_last_stack(int content, t_stack *stack);
 void			ft_free_push_swap(t_push_swap *push_swap);
 int				ft_get_min_int(int num_arg, ...);
+int				ft_diference(int a, int b);
 
 //input
 char			***ft_read_imput(int narg, char **argv);
@@ -103,5 +104,7 @@ t_stack			*ft_stack_max_num(t_stack *stack);
 t_stack			*ft_min_stack_from_num(t_stack *stack, int num);
 t_stack			*ft_max_stack_from_num(t_stack *stack, int num);
 t_stack			*ft_compress_stack(t_stack *stack);
+t_stack			*ft_first_stack_in_range(t_stack *stack, int min, int max);
+t_stack			*ft_last_stack_in_range(t_stack *stack, int min, int max);
 
 #endif
