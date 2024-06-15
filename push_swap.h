@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/12 13:14:33 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/15 10:12:14 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,5 +106,6 @@ t_stack			*ft_max_stack_from_num(t_stack *stack, int num);
 t_stack			*ft_compress_stack(t_stack *stack);
 t_stack			*ft_first_stack_in_range(t_stack *stack, int min, int max);
 t_stack			*ft_last_stack_in_range(t_stack *stack, int min, int max);
+t_stack			*ft_copy_stack(t_stack *stack);
 
 #endif

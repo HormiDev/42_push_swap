@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/12 02:30:45 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/15 23:18:01 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ int	main(int argc, char **argv)
 	push_swap = parsig(argc, argv);
 	if (push_swap == 0)
 		return (0);
+	ft_compress_stack(push_swap->a);
 	if (ft_stack_size(push_swap->a) < 6)
 		ft_push_swap_fb(push_swap);
 	else

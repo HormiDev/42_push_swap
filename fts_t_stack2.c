@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/03 01:09:20 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/10 14:09:49 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/15 23:12:03 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ t_stack	*ft_min_stack_from_num(t_stack *stack, int num)
 {
 	t_stack	*min;
 
-	min = stack;
+	min = ft_stack_max_num(stack);
 	while (stack != 0)
 	{
 		if (stack->content >= num && stack->content < min->content)
@@ -58,7 +58,7 @@ t_stack	*ft_max_stack_from_num(t_stack *stack, int num)
 {
 	t_stack	*max;
 
-	max = stack;
+	max = ft_stack_min_num(stack);
 	while (stack != 0)
 	{
 		if (stack->content <= num && stack->content > max->content)
