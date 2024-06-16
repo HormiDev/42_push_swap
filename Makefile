@@ -6,7 +6,7 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 18:43:11 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/06/16 06:01:17 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/06/16 06:04:16 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -102,5 +102,5 @@ test5:
 
 test6:
 	@echo "test 6"
-	@echo "1000 numeros"
+	@echo "500 numeros"
 	@echo "chequer $$(./$(NAME) $(ARGS6) | ./checker_linux $(ARGS6))" "nº movimientos $$(./$(NAME) $(ARGS6) | wc -l) \n"
