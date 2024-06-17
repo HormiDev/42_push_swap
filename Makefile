@@ -6,7 +6,7 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 18:43:11 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/06/16 06:04:16 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/06/16 18:56:33 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,30 +77,30 @@ test: test1	test2 test3 test4 test5 test6
 test1:
 	@echo "test 1"
 	@echo "5 numeros"
-	@echo "chequer $$(./$(NAME) $(ARGS1) | ./checker_linux $(ARGS1))" " nº movimientos $$(./$(NAME) $(ARGS1) | wc -l) \n"
+	@echo "chequer [$$(./$(NAME) $(ARGS1) | ./checker_linux $(ARGS1))]" "nº movimientos [$$(./$(NAME) $(ARGS1) | wc -l)] \n"
 
 
 test2:
 	@echo "test 2"
 	@echo "10 numeros"
-	@echo "chequer $$(./$(NAME) $(ARGS2) | ./checker_linux $(ARGS2))" "nº movimientos $$(./$(NAME) $(ARGS2) | wc -l) \n"
+	@echo "chequer [$$(./$(NAME) $(ARGS2) | ./checker_linux $(ARGS2))]" "nº movimientos [$$(./$(NAME) $(ARGS2) | wc -l)] \n"
 
 test3:
 	@echo "test 3"
 	@echo "100 numeros"
-	@echo "chequer $$(./$(NAME) $(ARGS3) | ./checker_linux $(ARGS3))" "nº movimientos $$(./$(NAME) $(ARGS3) | wc -l) \n"
+	@echo "chequer [$$(./$(NAME) $(ARGS3) | ./checker_linux $(ARGS3))]" "nº movimientos [$$(./$(NAME) $(ARGS3) | wc -l)] \n"
 
 test4:
 	@echo "test 4"
 	@echo "100 numeros"
-	@echo "chequer $$(./$(NAME) $(ARGS4) | ./checker_linux $(ARGS4))" "nº movimientos $$(./$(NAME) $(ARGS4) | wc -l) \n"
+	@echo "chequer [$$(./$(NAME) $(ARGS4) | ./checker_linux $(ARGS4))]" "nº movimientos [$$(./$(NAME) $(ARGS4) | wc -l)] \n"
 
 test5:
 	@echo "test 5"
 	@echo "500 numeros"
-	@echo "chequer $$(./$(NAME) $(ARGS5) | ./checker_linux $(ARGS5))" "nº movimientos $$(./$(NAME) $(ARGS5) | wc -l) \n"
+	@echo "chequer [$$(./$(NAME) $(ARGS5) | ./checker_linux $(ARGS5))]" "nº movimientos [$$(./$(NAME) $(ARGS5) | wc -l)] \n"
 
 test6:
 	@echo "test 6"
 	@echo "500 numeros"
-	@echo "chequer $$(./$(NAME) $(ARGS6) | ./checker_linux $(ARGS6))" "nº movimientos $$(./$(NAME) $(ARGS6) | wc -l) \n"
+	@echo "chequer [$$(./$(NAME) $(ARGS6) | ./checker_linux $(ARGS6))]" "nº movimientos [$$(./$(NAME) $(ARGS6) | wc -l)] \n"
