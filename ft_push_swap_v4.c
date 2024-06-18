@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/10 13:39:04 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/12 16:41:35 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/18 21:41:51 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,11 +109,11 @@ t_instructions	*ft_move_to_b(t_push_swap *push_swap, int range)
 			pb(push_swap);
 			ft_add_last_instruction(&instructions, ft_new_instruction(4));
 			//si la diferencia entre el primer y segundo es mayor que la diferencia entre el primer y el ultimo mueve el el primero al final
-			/*if (ft_stack_size(push_swap->b) > 1 && ft_diference(push_swap->b->content, push_swap->b->next->content) > ft_diference(push_swap->b->content, stack_last(push_swap->b)->content))
+			if (ft_stack_size(push_swap->b) > 1 && ft_diference(push_swap->b->content, push_swap->b->next->content) > ft_diference(push_swap->b->content, stack_last(push_swap->b)->content))
 			{
 				rb(push_swap);
 				ft_add_last_instruction(&instructions, ft_new_instruction(6));
-			}*/
+			}
 		}
 		else
 		{
@@ -127,8 +127,6 @@ t_instructions	*ft_move_to_b(t_push_swap *push_swap, int range)
 				rra(push_swap);
 				ft_add_last_instruction(&instructions, ft_new_instruction(8));
 			}
-			/*ra(push_swap);
-			ft_add_last_instruction(&instructions, ft_new_instruction(5));*/
 		}
 	}
 	return (instructions);

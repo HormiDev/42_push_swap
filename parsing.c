@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:19:36 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/02 21:20:04 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/18 23:42:34 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,11 +32,13 @@ static t_push_swap	*parsing2(int i, t_push_swap *ps, char ***input)
 		j = 0;
 		while (input[i][j])
 		{
-			if (ft_is_repeat(ft_atoi(input[i][j]), ps->a))
+			if (ft_is_repeat(ft_atoi(input[i][j]), ps->a) ||
+				ft_atol(input[i][j]) > 2147483647 ||
+				ft_atol(input[i][j]) < -2147483648)
 			{
 				ft_free_input(input);
 				ft_free_push_swap(ps);
-				write(1, "Error\n", 6);
+				write(2, "Error\n", 6);
 				return (0);
 			}
 			ps->a = ft_add_new_last_stack(ft_atoi(input[i][j]), ps->a);
@@ -60,7 +62,7 @@ t_push_swap	*parsig(int argc, char **argv)
 	if (!ft_check_input(input))
 	{
 		ft_free_input(input);
-		write(1, "Error\n", 6);
+		write(2, "Error\n", 6);
 		return (0);
 	}
 	ps = ft_init_push_swap();

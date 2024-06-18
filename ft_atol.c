@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/18 19:21:26 by ide-dieg         ###   ########.fr       */
+/*   Created: 2024/06/18 19:40:34 by ide-dieg          #+#    #+#             */
+/*   Updated: 2024/06/18 19:44:31 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+long	ft_atol(const char *str)
 {
-	t_push_swap	*push_swap;
+	long	num;
+	int		cont;
+	int		mult;
 
-	if (argc < 2)
+	num = 0;
+	cont = 0;
+	mult = 1;
+	while (str[cont] == ' ' || (str[cont] >= '\t' && str[cont] <= '\r'))
+		cont++;
+	if (str[cont] == '-')
+		mult = -1;
+	if (str[cont] == '-' || str[cont] == '+')
+		cont++;
+	while (ft_isdigit(str[cont]))
 	{
-		return (0);
+		num = num * 10 + (str[cont] - 48);
+		cont++;
 	}
-	push_swap = parsig(argc, argv);
-	if (push_swap == 0)
-		return (0);
-	ft_compress_stack(push_swap->a);
-	if (is_stack_ordered_min_max(push_swap->a))
-	{
-		ft_free_push_swap(push_swap);
-		return (0);
-	}
-	if (ft_stack_size(push_swap->a) < 6)
-		ft_push_swap_fb(push_swap);
-	else
-		ft_push_swap_v4(push_swap);
-	ft_free_push_swap(push_swap);
-	return (0);
+	return (num * mult);
 }

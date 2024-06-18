@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/31 19:06:16 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/10 17:51:51 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/18 19:18:17 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	ft_push_swap_fb(t_push_swap *push_swap)
 	t_push_swap		*tmp;
 	t_instructions	*instructions;
 
+	if (ft_stack_size(push_swap->a) < 2)
+		return ;
 	tmp = ft_duplicate_push_swap(push_swap);
 	instructions = ft_new_instruction(0);
 	if (tmp == 0 || instructions == 0 || is_stack_ordered_min_max(tmp->a))
