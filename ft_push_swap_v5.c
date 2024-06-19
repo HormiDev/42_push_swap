@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_push_swap_v4.c                                  :+:      :+:    :+:   */
+/*   ft_push_swap_v5.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/06/10 13:39:04 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/19 20:58:12 by ide-dieg         ###   ########.fr       */
+/*   Created: 2024/06/19 18:40:58 by ide-dieg          #+#    #+#             */
+/*   Updated: 2024/06/19 22:52:18 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_move_to_a_v4(t_push_swap *push_swap, t_instructions *instructions)
+void	ft_move_to_a_v5(t_push_swap *push_swap, t_instructions *instructions)
 {
 	t_stack	*min;
 	t_stack	*max;
@@ -30,6 +30,7 @@ void	ft_move_to_a_v4(t_push_swap *push_swap, t_instructions *instructions)
 		max_position = ft_stack_position(push_swap->b, max);
 		max_size = ft_stack_size(max);
 		min_dintance = ft_get_min_int(4, min_position, min_size, max_position, max_size);
+		//si la distancaia minima es la posicion del maximo, rotar hasta que el maximo este en la primera posicion
 		if (min_dintance == max_position)
 		{
 			while (push_swap->b != max)
@@ -40,6 +41,7 @@ void	ft_move_to_a_v4(t_push_swap *push_swap, t_instructions *instructions)
 			pa(push_swap);
 			ft_add_last_instruction(&instructions, ft_new_instruction(3));
 		}
+		//si la distancia minima es el tamaño del maximo, rotar hasta que el maximo este en la ultima posicion
 		else if (min_dintance == max_size)
 		{
 			while (push_swap->b != max)
@@ -50,6 +52,7 @@ void	ft_move_to_a_v4(t_push_swap *push_swap, t_instructions *instructions)
 			pa(push_swap);
 			ft_add_last_instruction(&instructions, ft_new_instruction(3));
 		}
+		//si la distancia minima es la posicion del minimo, rotar hasta que el minimo este en la primera posicion
 		else if (min_dintance == min_position)
 		{
 			while (push_swap->b != min)
@@ -62,6 +65,7 @@ void	ft_move_to_a_v4(t_push_swap *push_swap, t_instructions *instructions)
 			ra(push_swap);
 			ft_add_last_instruction(&instructions, ft_new_instruction(5));
 		}
+		//si la distancia minima es el tamaño del minimo, rotar hasta que el minimo este en la ultima posicion
 		else
 		{
 			while (push_swap->b != min)
@@ -75,6 +79,7 @@ void	ft_move_to_a_v4(t_push_swap *push_swap, t_instructions *instructions)
 			ft_add_last_instruction(&instructions, ft_new_instruction(5));
 		}
 	}
+	//si la posicion del minimo no es la primera, rotar hasta que sea la primera en la direccion mas corta
 	min = ft_stack_min_num(push_swap->a);
 	if (ft_stack_position(push_swap->a, min) < ft_stack_size(min))
 	{
@@ -95,7 +100,7 @@ void	ft_move_to_a_v4(t_push_swap *push_swap, t_instructions *instructions)
 	
 }
 
-t_instructions	*ft_move_to_b_v4(t_push_swap *push_swap, int range)
+t_instructions	*ft_move_to_b_v5(t_push_swap *push_swap, int range)
 {
 	t_instructions	*instructions;
 	int				min;
@@ -109,7 +114,7 @@ t_instructions	*ft_move_to_b_v4(t_push_swap *push_swap, int range)
 			pb(push_swap);
 			ft_add_last_instruction(&instructions, ft_new_instruction(4));
 			//si la diferencia entre el primer y segundo es mayor que la diferencia entre el primer y el ultimo mueve el el primero al final
-			if (ft_stack_size(push_swap->b) > 1 && ft_diference(push_swap->b->content, push_swap->b->next->content) > ft_diference(push_swap->b->content, stack_last(push_swap->b)->content))
+			if (ft_diference(push_swap->b->content, min) > range / 2)
 			{
 				rb(push_swap);
 				ft_add_last_instruction(&instructions, ft_new_instruction(6));
@@ -132,15 +137,15 @@ t_instructions	*ft_move_to_b_v4(t_push_swap *push_swap, int range)
 	return (instructions);
 }
 
-// algorito de ordenamiento V4
-void	ft_push_swap_v4(t_push_swap *push_swap)
+// algorito de ordenamiento V5
+void	ft_push_swap_v5(t_push_swap *push_swap)
 {
 	t_instructions	*instructions;
 	int				range;
 	
-	range = ft_stack_size(push_swap->a) / 20;
-	instructions = ft_move_to_b_v4(push_swap, range);
-	ft_move_to_a_v4(push_swap, instructions);
+	range = ft_stack_size(push_swap->a) / 7;
+	instructions = ft_move_to_b_v5(push_swap, range);
+	ft_move_to_a_v5(push_swap, instructions);
 	print_instructions(instructions);
 	ft_free_instructions(instructions);
 }
