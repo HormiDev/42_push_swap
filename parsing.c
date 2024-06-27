@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/20 17:19:36 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/18 23:42:34 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/06/26 00:04:25 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,6 @@ t_push_swap	*parsig(int argc, char **argv)
 	char		***input;
 
 	i = 0;
-	ps = malloc(sizeof(t_push_swap));
 	input = ft_read_imput(argc, argv);
 	if (!ft_check_input(input))
 	{
