@@ -6,7 +6,7 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 16:43:30 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/05/31 17:20:54 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/07/07 22:07:42 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,25 +83,25 @@ OBJ_BONUS = $(SRC_BONUS:.c=.o)
 all: build
 
 build: $(OBJ)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJ)
-	ranlib $(NAME)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
+	@ranlib $(NAME)
 
 # Regla para compilar los archivos fuente
 %.o: %.c
-	$(CC) $(CFLAGS) -c $< -o $@
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 # Regla para construir la parte bonus
 bonus: $(OBJ_BONUS)
-	$(AR) $(ARFLAGS) $(NAME) $(OBJ_BONUS)
-	ranlib $(NAME)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJ_BONUS)
+	@ranlib $(NAME)
 
 # Regla para limpiar los archivos objeto
 clean:
-	rm -f $(OBJ) $(OBJ_BONUS)
+	@rm -f $(OBJ) $(OBJ_BONUS)
 
 # Regla para limpiar los archivos objeto y el archivo de salida
 fclean:
-	rm -f $(OBJ) $(OBJ_BONUS) $(NAME)
+	@rm -f $(OBJ) $(OBJ_BONUS) $(NAME)
 
 # Regla para reconstruir el proyecto desde cero
 re: fclean all

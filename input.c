@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 19:52:26 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/26 01:47:35 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/07/07 22:09:10 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	***ft_read_imput(int narg, char **argv)
 	input = malloc(sizeof(char **) * (narg - 1));
 	while (i + 1 < narg)
 	{
-		input[i] = *ft_split(argv[i + 1], ' ');
+		input[i] = ft_split(argv[i + 1], ' ');
 		i++;
 	}
 	input[i] = 0;
