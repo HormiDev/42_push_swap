@@ -6,7 +6,7 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 18:43:11 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/07/08 13:21:57 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/07/15 00:00:57 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,8 +35,9 @@ SRC =	main.c \
 		fts_t_stack.c \
 		fts_t_stack2.c \
 		fts_t_stack3.c \
-		input.c \
-		parsing.c \
+		fts_t_strlst.c \
+		input_v2.c \
+		parsing_v2.c \
 		push_swap_utils.c \
 		push.c \
 		reverse_rotate.c \
@@ -53,10 +54,13 @@ fclean: clean
 	@rm -f $(NAME)
 	@echo "Cleaned"
 
+
 libft:
-	@echo "Compiling Libft..."
-	@make -C 42_Libft > /dev/null 2>&1
-	@echo "Libft compiled"
+	@if [ ! -f 42_Libft/libft.a ]; then \
+		echo "Compiling Libft..."; \
+		make -C 42_Libft > /dev/null 2>&1; \
+		echo "Libft compiled"; \
+	fi
 
 libft_fclean:
 	@echo "Cleaning Libft..."

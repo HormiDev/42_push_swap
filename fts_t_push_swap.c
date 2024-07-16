@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/02 21:13:47 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/25 22:00:18 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/07/15 00:19:50 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,6 +68,7 @@ void	ft_free_push_swap(t_push_swap *push_swap)
 	free(push_swap);
 }
 
+// borrar esta funcion
 void	print_push_swap(t_push_swap *push_swap)
 {
 	t_stack	*tmp;

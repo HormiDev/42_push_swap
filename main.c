@@ -6,21 +6,21 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/06/26 00:04:14 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/07/16 23:35:13 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	main(int argc, char **argv)
+int	main(int narg, char **argv)
 {
 	t_push_swap	*push_swap;
 
-	if (argc < 2)
+	if (narg < 2)
 	{
 		return (0);
 	}
-	push_swap = parsig(argc, argv);
+	push_swap = parsing(narg, argv);
 	if (push_swap == 0)
 		return (0);
 	ft_compress_stack(push_swap->a);
@@ -36,3 +36,20 @@ int	main(int argc, char **argv)
 	ft_free_push_swap(push_swap);
 	return (0);
 }
+/*
+int main(int argc, char **argv)
+{
+	t_strlst	*input = 0;
+	int cont = 0; 
+
+	while (cont < argc)
+	{
+		input = ft_strlst_add_new(ft_strdup(argv[cont]), input);
+		cont++;
+	}
+	printf("Input:\n");
+	print_strlst(input);
+	ft_strlst_clear(input);
+	return (0);
+}
+*/
