@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/07/16 23:35:13 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/07/22 13:54:34 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	main(int narg, char **argv)
 	if (ft_stack_size(push_swap->a) < 6)
 		ft_push_swap_fb(push_swap);
 	else
-		ft_push_swap_v5(push_swap);
+		ft_push_swap_v6(push_swap);
 	ft_free_push_swap(push_swap);
 	return (0);
 }
