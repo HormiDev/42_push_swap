@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/07/22 13:54:28 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/07/27 00:07:15 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,6 +89,7 @@ void			ft_push_swap_v3(t_push_swap *push_swap);
 void			ft_push_swap_v4(t_push_swap *push_swap);
 void			ft_push_swap_v5(t_push_swap *push_swap);
 void			ft_push_swap_v6(t_push_swap *push_swap);
+void			ft_push_swap_v7(t_push_swap *push_swap);
 
 //t_instructions
 t_instructions	*ft_new_instruction(char instruction);
