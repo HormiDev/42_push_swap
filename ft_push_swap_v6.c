@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/19 18:40:58 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/07/22 13:53:29 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/08/04 21:47:28 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -215,7 +215,7 @@ void	ft_push_swap_v6(t_push_swap *push_swap)
 	t_instructions	*instructions;
 	int				range;
 	
-	range = ft_stack_size(push_swap->a) / 7;
+	range = ft_stack_size(push_swap->a) / 7.5;
 	instructions = ft_move_to_b_v6(push_swap, range);
 	ft_move_to_a_v6(push_swap, instructions);
 	print_instructions(instructions);

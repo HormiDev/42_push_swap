@@ -6,13 +6,14 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 23:47:03 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/07/27 20:53:49 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/08/05 14:17:16 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void	ft_move_to_a_v7(t_push_swap *push_swap, t_instructions *instructions)
+void	ft_move_to_a_v7(t_push_swap *push_swap, t_instructions *instructions,
+			int return_range)
 {
 	t_stack	*min;
 	t_stack	*max;
@@ -21,6 +22,7 @@ void	ft_move_to_a_v7(t_push_swap *push_swap, t_instructions *instructions)
 	int		max_position;
 	int		max_size;
 	int		min_dintance;
+
 	while (push_swap->b != 0)
 	{
 		min = ft_stack_min_num(push_swap->b);
@@ -35,7 +37,7 @@ void	ft_move_to_a_v7(t_push_swap *push_swap, t_instructions *instructions)
 		{
 			while (push_swap->b != max)
 			{
-				if(push_swap->b->content >= max->content - 1)
+				if(push_swap->b->content >= max->content - return_range)
 				{
 					pa(push_swap);
 					ft_add_last_instruction(&instructions, ft_new_instruction(3));
@@ -82,7 +84,7 @@ void	ft_move_to_a_v7(t_push_swap *push_swap, t_instructions *instructions)
 		{
 			while (push_swap->b != max)
 			{
-				if(push_swap->b->content >= max->content - 1)
+				if(push_swap->b->content >= max->content - return_range)
 				{
 					pa(push_swap);
 					ft_add_last_instruction(&instructions, ft_new_instruction(3));
@@ -215,11 +217,13 @@ t_instructions	*ft_move_to_b_v7(t_push_swap *push_swap, int range)
 void	ft_push_swap_v7(t_push_swap *push_swap)
 {
 	t_instructions	*instructions;
-	int				range;
+	int				range; // (0 - 2)
+	int				return_range;
 	
 	range = ft_stack_size(push_swap->a) / 7.5;
+	return_range = 2;
 	instructions = ft_move_to_b_v7(push_swap, range);
-	ft_move_to_a_v7(push_swap, instructions);
+	ft_move_to_a_v7(push_swap, instructions, return_range);
 	print_instructions(instructions);
 	ft_free_instructions(instructions);
 }
