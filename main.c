@@ -6,12 +6,12 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/08/05 10:52:28 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/09/12 19:28:41 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-
+/*
 int	main(int narg, char **argv)
 {
 	t_push_swap	*push_swap;
@@ -36,10 +36,53 @@ int	main(int narg, char **argv)
 	ft_free_push_swap(push_swap);
 	return (0);
 }
+*/
+
+int main()
+{
+	t_instructions	*instructions = 0;
+	t_instructions	*tmp;
+
+	ft_add_last_instruction(&instructions, ft_new_instruction(3));
+	ft_add_last_instruction(&instructions, ft_new_instruction(0));
+	ft_add_last_instruction(&instructions, ft_new_instruction(0));
+	ft_add_last_instruction(&instructions, ft_new_instruction(1));
+	ft_add_last_instruction(&instructions, ft_new_instruction(1));
+	ft_add_last_instruction(&instructions, ft_new_instruction(0));
+	ft_add_last_instruction(&instructions, ft_new_instruction(5));
+	ft_add_last_instruction(&instructions, ft_new_instruction(5));
+	ft_add_last_instruction(&instructions, ft_new_instruction(5));
+	ft_add_last_instruction(&instructions, ft_new_instruction(5));
+	ft_add_last_instruction(&instructions, ft_new_instruction(5));
+	ft_add_last_instruction(&instructions, ft_new_instruction(1));
+	ft_add_last_instruction(&instructions, ft_new_instruction(0));
+	ft_add_last_instruction(&instructions, ft_new_instruction(1));
+	ft_add_last_instruction(&instructions, ft_new_instruction(3));
+
+	printf("Instructions:\n");
+	print_instructions(instructions);
+	tmp = instructions;
+	while (tmp != 0)
+	{
+		printf("%d\n",  ft_equal_instruction_cont(tmp));
+		tmp = tmp->next;
+	}
+	ft_compress_instructions(&instructions);
+	printf("Instructions compressed:\n");
+	print_instructions(instructions);
+	tmp = instructions;
+	while (tmp != 0)
+	{
+		printf("%d\n",  ft_equal_instruction_cont(tmp));
+		tmp = tmp->next;
+	}
+	ft_free_instructions(instructions);
+}
+
 /*
 int main(int argc, char **argv)
 {
-	t_strlst	*input = 0;
+	t_strlst *input = 0;
 	int cont = 0; 
 
 	while (cont < argc)
