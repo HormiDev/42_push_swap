@@ -6,12 +6,12 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:23 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/09/12 19:28:41 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/09/13 22:27:16 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
-/*
+
 int	main(int narg, char **argv)
 {
 	t_push_swap	*push_swap;
@@ -32,32 +32,32 @@ int	main(int narg, char **argv)
 	if (ft_stack_size(push_swap->a) < 6)
 		ft_push_swap_fb(push_swap);
 	else
-		ft_push_swap_v7(push_swap);
+		ft_push_swap_rg(push_swap);
 	ft_free_push_swap(push_swap);
 	return (0);
 }
-*/
 
+/*
 int main()
 {
 	t_instructions	*instructions = 0;
 	t_instructions	*tmp;
 
-	ft_add_last_instruction(&instructions, ft_new_instruction(3));
-	ft_add_last_instruction(&instructions, ft_new_instruction(0));
-	ft_add_last_instruction(&instructions, ft_new_instruction(0));
-	ft_add_last_instruction(&instructions, ft_new_instruction(1));
-	ft_add_last_instruction(&instructions, ft_new_instruction(1));
-	ft_add_last_instruction(&instructions, ft_new_instruction(0));
 	ft_add_last_instruction(&instructions, ft_new_instruction(5));
 	ft_add_last_instruction(&instructions, ft_new_instruction(5));
 	ft_add_last_instruction(&instructions, ft_new_instruction(5));
+	ft_add_last_instruction(&instructions, ft_new_instruction(6));
+	ft_add_last_instruction(&instructions, ft_new_instruction(6));
+	ft_add_last_instruction(&instructions, ft_new_instruction(6));
+	ft_add_last_instruction(&instructions, ft_new_instruction(6));
+	ft_add_last_instruction(&instructions, ft_new_instruction(5));
+	ft_add_last_instruction(&instructions, ft_new_instruction(6));
+	ft_add_last_instruction(&instructions, ft_new_instruction(6));
+	ft_add_last_instruction(&instructions, ft_new_instruction(6));
+	ft_add_last_instruction(&instructions, ft_new_instruction(6));
 	ft_add_last_instruction(&instructions, ft_new_instruction(5));
 	ft_add_last_instruction(&instructions, ft_new_instruction(5));
-	ft_add_last_instruction(&instructions, ft_new_instruction(1));
-	ft_add_last_instruction(&instructions, ft_new_instruction(0));
-	ft_add_last_instruction(&instructions, ft_new_instruction(1));
-	ft_add_last_instruction(&instructions, ft_new_instruction(3));
+	ft_add_last_instruction(&instructions, ft_new_instruction(5));
 
 	printf("Instructions:\n");
 	print_instructions(instructions);
@@ -67,7 +67,7 @@ int main()
 		printf("%d\n",  ft_equal_instruction_cont(tmp));
 		tmp = tmp->next;
 	}
-	ft_compress_instructions(&instructions);
+	ft_compress_instructions(instructions);
 	printf("Instructions compressed:\n");
 	print_instructions(instructions);
 	tmp = instructions;
@@ -78,7 +78,7 @@ int main()
 	}
 	ft_free_instructions(instructions);
 }
-
+*/
 /*
 int main(int argc, char **argv)
 {

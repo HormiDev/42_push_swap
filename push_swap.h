@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/09/12 19:06:08 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/09/13 22:29:19 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,6 +90,9 @@ void			ft_push_swap_v4(t_push_swap *push_swap);
 void			ft_push_swap_v5(t_push_swap *push_swap);
 void			ft_push_swap_v6(t_push_swap *push_swap);
 void			ft_push_swap_v7(t_push_swap *push_swap);
+void			ft_push_swap_rg(t_push_swap *push_swap);
+t_instructions	*ft_push_swap_v7_rg(t_push_swap *push_swap,
+					int range, int return_range);
 
 //t_instructions
 t_instructions	*ft_new_instruction(char instruction);
@@ -104,8 +107,11 @@ void			*select_function_for_instruction(char instruction);
 t_instructions	*ft_last_instruction(t_instructions *instructions);
 void			ft_change_instruction(t_instructions *instruction, char new);
 void			ft_delete_instruction(t_instructions *instruction);
-void			ft_compress_instructions(t_instructions **instructions);
+void			ft_compress_instructions(t_instructions *instructions);
 int				ft_equal_instruction_cont(t_instructions *instruction);
+void			ft_compress_rotates(t_instructions *instruction1,
+					t_instructions *instruction2);
+int				ft_len_instructions(t_instructions *instructions);
 
 //t_stack
 t_stack			*ft_add_new_last_stack(int content, t_stack *stack);

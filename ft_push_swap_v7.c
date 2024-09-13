@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 23:47:03 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/08/05 14:17:16 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/09/13 22:28:20 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -224,6 +224,19 @@ void	ft_push_swap_v7(t_push_swap *push_swap)
 	return_range = 2;
 	instructions = ft_move_to_b_v7(push_swap, range);
 	ft_move_to_a_v7(push_swap, instructions, return_range);
+	ft_compress_instructions(instructions);
 	print_instructions(instructions);
 	ft_free_instructions(instructions);
+}
+
+t_instructions	*ft_push_swap_v7_rg(t_push_swap *push_swap,
+					int range, int return_range)
+{
+	t_instructions	*instructions;
+
+	instructions = ft_move_to_b_v7(push_swap, range);
+	ft_move_to_a_v7(push_swap, instructions, return_range);
+	ft_compress_instructions(instructions);
+	ft_free_push_swap(push_swap);
+	return (instructions);
 }

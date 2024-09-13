@@ -1,0 +1,83 @@
+v6
+
+test 16
+100 argumentos desordenados
+1. chequer [OK] nº movimientos [679] 5 PUNTOS
+2. chequer [OK] nº movimientos [675] 5 PUNTOS
+3. chequer [OK] nº movimientos [719] 4 PUNTOS
+4. chequer [OK] nº movimientos [617] 5 PUNTOS
+5. chequer [OK] nº movimientos [639] 5 PUNTOS
+6. chequer [OK] nº movimientos [630] 5 PUNTOS
+7. chequer [OK] nº movimientos [711] 4 PUNTOS
+8. chequer [OK] nº movimientos [662] 5 PUNTOS
+9. chequer [OK] nº movimientos [661] 5 PUNTOS
+10. chequer [OK] nº movimientos [700] 5 PUNTOS
+
+test 17
+500 argumentos desordenados
+1. chequer [OK] nº movimientos [5189] 5 PUNTOS
+2. chequer [OK] nº movimientos [5113] 5 PUNTOS
+3. chequer [OK] nº movimientos [5380] 5 PUNTOS
+4. chequer [OK] nº movimientos [5317] 5 PUNTOS
+5. chequer [OK] nº movimientos [5864] 4 PUNTOS
+6. chequer [OK] nº movimientos [5614] 4 PUNTOS
+7. chequer [OK] nº movimientos [5471] 5 PUNTOS
+8. chequer [OK] nº movimientos [5431] 5 PUNTOS
+9. chequer [OK] nº movimientos [5672] 4 PUNTOS
+10. chequer [OK] nº movimientos [5224] 5 PUNTOS
+
+v7 pre ft_compress_instructions
+
+test 16
+100 argumentos desordenados
+1. chequer [OK] nº movimientos [704] 4 PUNTOS
+2. chequer [OK] nº movimientos [706] 4 PUNTOS
+3. chequer [OK] nº movimientos [761] 4 PUNTOS
+4. chequer [OK] nº movimientos [659] 5 PUNTOS
+5. chequer [OK] nº movimientos [671] 5 PUNTOS
+6. chequer [OK] nº movimientos [668] 5 PUNTOS
+7. chequer [OK] nº movimientos [735] 4 PUNTOS
+8. chequer [OK] nº movimientos [682] 5 PUNTOS
+9. chequer [OK] nº movimientos [690] 5 PUNTOS
+10. chequer [OK] nº movimientos [740] 4 PUNTOS
+
+test 17
+500 argumentos desordenados
+1. chequer [OK] nº movimientos [5183] 5 PUNTOS
+2. chequer [OK] nº movimientos [5009] 5 PUNTOS
+3. chequer [OK] nº movimientos [5218] 5 PUNTOS
+4. chequer [OK] nº movimientos [5146] 5 PUNTOS
+5. chequer [OK] nº movimientos [5738] 4 PUNTOS
+6. chequer [OK] nº movimientos [5464] 5 PUNTOS
+7. chequer [OK] nº movimientos [5373] 5 PUNTOS
+8. chequer [OK] nº movimientos [5429] 5 PUNTOS
+9. chequer [OK] nº movimientos [5478] 5 PUNTOS
+10. chequer [OK] nº movimientos [5094] 5 PUNTOS
+
+v7 post ft_compress_instructions
+
+test 16
+100 argumentos desordenados
+1. chequer [OK] nº movimientos [697] 5 PUNTOS
+2. chequer [OK] nº movimientos [684] 5 PUNTOS
+3. chequer [OK] nº movimientos [733] 4 PUNTOS
+4. chequer [OK] nº movimientos [627] 5 PUNTOS
+5. chequer [OK] nº movimientos [654] 5 PUNTOS
+6. chequer [OK] nº movimientos [643] 5 PUNTOS
+7. chequer [OK] nº movimientos [718] 4 PUNTOS
+8. chequer [OK] nº movimientos [659] 5 PUNTOS
+9. chequer [OK] nº movimientos [666] 5 PUNTOS
+10. chequer [OK] nº movimientos [723] 4 PUNTOS
+
+test 17
+500 argumentos desordenados
+1. chequer [OK] nº movimientos [5035] 5 PUNTOS
+2. chequer [OK] nº movimientos [4860] 5 PUNTOS
+3. chequer [OK] nº movimientos [5063] 5 PUNTOS
+4. chequer [OK] nº movimientos [5001] 5 PUNTOS
+5. chequer [OK] nº movimientos [5583] 4 PUNTOS
+6. chequer [OK] nº movimientos [5395] 5 PUNTOS
+7. chequer [OK] nº movimientos [5284] 5 PUNTOS
+8. chequer [OK] nº movimientos [5278] 5 PUNTOS
+9. chequer [OK] nº movimientos [5355] 5 PUNTOS
+10. chequer [OK] nº movimientos [4960] 5 PUNTOS

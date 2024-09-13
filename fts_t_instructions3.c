@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 13:55:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/09/12 18:52:48 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/09/13 19:50:28 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,37 +65,37 @@ void	ft_delete_instruction(t_instructions *instruction)
 		return ;
 	prev = instruction->prev;
 	next = instruction->next;
-	prev->next = next;
-	next->prev = prev;
+	if (prev != 0)
+		prev->next = next;
+	if (next != 0)
+		next->prev = prev;
 	free(instruction);
 }
 
-void	ft_compress_instructions(t_instructions **instructions)
+void	ft_compress_instructions(t_instructions *instructions)
 {
-	t_instructions	*tmp;
-
-	tmp = *instructions;
-	while (tmp->next != 0)
+	if (instructions == 0)
+		return ;
+	while (instructions->next != 0)
 	{
-		if ((tmp->instruction == 0 && tmp->next->instruction == 1)
-			|| (tmp->instruction == 1 && tmp->next->instruction == 0))
+		if ((instructions->instruction == 0 && instructions->next->instruction == 1)
+			|| (instructions->instruction == 1 && instructions->next->instruction == 0))
 		{
-			ft_change_instruction(tmp, 2);
-			ft_delete_instruction(tmp->next);
+			ft_change_instruction(instructions, 2);
+			ft_delete_instruction(instructions->next);
 		}
-		else if ((tmp->instruction == 5 && tmp->next->instruction == 6)
-			|| (tmp->instruction == 6 && tmp->next->instruction == 5))
+		else if ((instructions->instruction == 5 && instructions->next->instruction == 6)
+			|| (instructions->instruction == 6 && instructions->next->instruction == 5))
 		{
-			ft_change_instruction(tmp, 7);
-			ft_delete_instruction(tmp->next);
+			ft_compress_rotates(instructions, instructions->next);
 		}
-		else if ((tmp->instruction == 8 && tmp->next->instruction == 9)
-			|| (tmp->instruction == 9 && tmp->next->instruction == 8))
+		else if ((instructions->instruction == 8 && instructions->next->instruction == 9)
+			|| (instructions->instruction == 9 && instructions->next->instruction == 8))
 		{
-			ft_change_instruction(tmp, 10);
-			ft_delete_instruction(tmp->next);
+			ft_change_instruction(instructions, 10);
+			ft_delete_instruction(instructions->next);
 		}
 		else
-		tmp = tmp->next;
+		instructions = instructions->next;
 	}
 }
