@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 13:55:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/09/13 19:50:28 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/09/14 00:24:45 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,7 @@ void	ft_compress_instructions(t_instructions *instructions)
 		else if ((instructions->instruction == 8 && instructions->next->instruction == 9)
 			|| (instructions->instruction == 9 && instructions->next->instruction == 8))
 		{
-			ft_change_instruction(instructions, 10);
-			ft_delete_instruction(instructions->next);
+			ft_compress_rotates(instructions, instructions->next);
 		}
 		else
 		instructions = instructions->next;
