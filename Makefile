@@ -6,11 +6,13 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 18:43:11 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/09/13 22:27:08 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/09/18 19:21:05 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = push_swap
+
+NAME_BONUS = checker
 
 LIB_NAME = push_swap.a
 
@@ -50,13 +52,45 @@ SRC =	main.c \
 		swap.c \
 		ft_atol.c \
 
+SRC_BONUS = chequer.c \
+			ft_push_swap_fb.c \
+			ft_push_swap_v1.c \
+			ft_push_swap_v2.c \
+			ft_push_swap_v3.c \
+			ft_push_swap_v4.c \
+			ft_push_swap_v5.c \
+			ft_push_swap_v6.c \
+			ft_push_swap_v7.c \
+			ft_push_swap_rg.c \
+			fts_t_instructions.c \
+			fts_t_instructions2.c \
+			fts_t_instructions3.c \
+			fts_t_instructions4.c \
+			fts_t_push_swap.c \
+			fts_t_stack.c \
+			fts_t_stack2.c \
+			fts_t_stack3.c \
+			fts_t_strlst.c \
+			input_v2.c \
+			parsing_v2.c \
+			push_swap_utils.c \
+			push.c \
+			reverse_rotate.c \
+			rotate.c \
+			swap.c \
+			ft_atol.c \
+			
+
 all: ide-dieg push_swap_title libft push_swap
+
+bonus: ide-dieg push_swap_title libft push_swap_bonus
 
 clean: libft_fclean
 
 fclean: clean
 	@echo "Cleaning..."
 	@rm -f $(NAME)
+	@rm -f $(NAME_BONUS)
 	@echo "Cleaned"
 
 
@@ -76,6 +110,11 @@ push_swap:
 	@echo "Compiling Push_Swap..."
 	@$(CC) $(CFLAGS) $(SRC) 42_Libft/libft.a -o $(NAME)
 	@echo "Push_Swap compiled"
+
+push_swap_bonus:
+	@echo "Compiling Checker..."
+	@$(CC) $(CFLAGS) $(SRC_BONUS) 42_Libft/libft.a -o $(NAME_BONUS)
+	@echo "Checker compiled"
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/01/25 16:43:30 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/07/12 17:03:04 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/09/18 05:03:45 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,14 +73,20 @@ SRC_BONUS =	ft_lstnew_bonus.c \
 			ft_lstiter_bonus.c \
 			ft_lstmap_bonus.c \
 
+SRC_GNL =	get_next_line.c \
+			get_next_line_utils.c \
+
 # Objetos generados a partir de los archivos fuente
 OBJ = $(SRC:.c=.o)
 
 # Objetos generados a partir de los archivos fuente de la parte bonus
 OBJ_BONUS = $(SRC_BONUS:.c=.o)
 
+# Objetos generados a partir de los archivos fuente de get_next_line
+OBJ_GNL = $(SRC_GNL:.c=.o)
+
 # Regla para construir el archivo de salida
-all: build
+all: build gnl
 
 build: $(OBJ)
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
@@ -95,13 +101,18 @@ bonus: $(OBJ_BONUS)
 	@$(AR) $(ARFLAGS) $(NAME) $(OBJ_BONUS)
 	@ranlib $(NAME)
 
+# Regla para construir get_next_line
+gnl: $(OBJ_GNL)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJ_GNL)
+	@ranlib $(NAME)
+
 # Regla para limpiar los archivos objeto
 clean:
-	@rm -f $(OBJ) $(OBJ_BONUS)
+
 
 # Regla para limpiar los archivos objeto y el archivo de salida
 fclean:
-	@rm -f $(OBJ) $(OBJ_BONUS) $(NAME)
+	@rm -f $(OBJ) $(OBJ_BONUS) $(NAME) $(NAME_BONUS)
 
 # Regla para reconstruir el proyecto desde cero
 re: fclean all
