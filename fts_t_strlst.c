@@ -6,15 +6,15 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 22:07:47 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/07/15 23:46:17 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/11/03 02:10:54 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int ft_strlst_size(t_strlst *lst)
+int	ft_strlst_size(t_strlst *lst)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (lst)
@@ -29,9 +29,8 @@ t_strlst	*ft_strlst_last(t_strlst *lst)
 {
 	if (!lst)
 		return (0);
-	while (lst->next){
+	while (lst->next)
 		lst = lst->next;
-	}
 	return (lst);
 }
 

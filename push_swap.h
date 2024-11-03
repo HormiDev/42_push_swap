@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/05/05 23:49:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/09/13 22:29:19 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/11/03 02:13:10 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,7 +107,7 @@ void			*select_function_for_instruction(char instruction);
 t_instructions	*ft_last_instruction(t_instructions *instructions);
 void			ft_change_instruction(t_instructions *instruction, char new);
 void			ft_delete_instruction(t_instructions *instruction);
-void			ft_compress_instructions(t_instructions *instructions);
+void			ft_compress_instructions(t_instructions *in);
 int				ft_equal_instruction_cont(t_instructions *instruction);
 void			ft_compress_rotates(t_instructions *instruction1,
 					t_instructions *instruction2);

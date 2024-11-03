@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 04:14:21 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/09/18 19:19:26 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/11/03 02:02:58 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int	ft_line_to_instruction(char *line)
 	return (-1);
 }
 
-t_instructions	*ft_parsing_instructions()
+t_instructions	*ft_parsing_instructions(void)
 {
 	char			*line;
 	t_instructions	*instructions;
@@ -48,7 +48,8 @@ t_instructions	*ft_parsing_instructions()
 	line = get_next_line(0);
 	while (line != 0)
 	{
-		ft_add_last_instruction(&instructions, ft_new_instruction(ft_line_to_instruction(line)));
+		ft_add_last_instruction(&instructions,
+			ft_new_instruction(ft_line_to_instruction(line)));
 		free(line);
 		line = get_next_line(0);
 	}

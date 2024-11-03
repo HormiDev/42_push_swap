@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 22:04:49 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/07/15 23:37:48 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/11/03 02:10:04 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ t_strlst	*ft_read_imput(int narg, char **argv)
 int	ft_check_input(t_strlst *input)
 {
 	t_strlst	*tmp;
-	int i;
+	int			i;
 
 	if (!input)
 		return (0);
@@ -50,7 +50,7 @@ int	ft_check_input(t_strlst *input)
 		while (tmp->content[i])
 		{
 			if (tmp->content[i] != '-' && tmp->content[i] != '+'
-			&& !ft_isdigit(tmp->content[i]) && tmp->content[i] != 0)
+				&& !ft_isdigit(tmp->content[i]) && tmp->content[i] != 0)
 				return (0);
 			i++;
 			while (tmp->content[i] != '\0')

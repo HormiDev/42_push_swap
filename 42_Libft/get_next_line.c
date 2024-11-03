@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/07 18:50:57 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/09/18 05:05:39 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/11/03 01:58:10 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -164,7 +164,8 @@ int main()
 	while (cont < 9)
 	{
 		read(fd, ft_lstlast_gnl(lst)->content, BUFFER_SIZE);
-		printf("%d\n", ft_strnchr(ft_lstlast_gnl(lst)->content, '\n', BUFFER_SIZE));
+		printf("%d\n", ft_strnchr(ft_lstlast_gnl(lst)->content,
+			'\n', BUFFER_SIZE));
 		ft_addnewlst(lst);
 		cont++;
 	}

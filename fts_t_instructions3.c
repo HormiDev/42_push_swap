@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 13:55:48 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/09/14 00:24:45 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/11/03 02:14:15 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,29 +72,29 @@ void	ft_delete_instruction(t_instructions *instruction)
 	free(instruction);
 }
 
-void	ft_compress_instructions(t_instructions *instructions)
+void	ft_compress_instructions(t_instructions *in)
 {
-	if (instructions == 0)
+	if (in == 0)
 		return ;
-	while (instructions->next != 0)
+	while (in->next != 0)
 	{
-		if ((instructions->instruction == 0 && instructions->next->instruction == 1)
-			|| (instructions->instruction == 1 && instructions->next->instruction == 0))
+		if ((in->instruction == 0 && in->next->instruction == 1)
+			|| (in->instruction == 1 && in->next->instruction == 0))
 		{
-			ft_change_instruction(instructions, 2);
-			ft_delete_instruction(instructions->next);
+			ft_change_instruction(in, 2);
+			ft_delete_instruction(in->next);
 		}
-		else if ((instructions->instruction == 5 && instructions->next->instruction == 6)
-			|| (instructions->instruction == 6 && instructions->next->instruction == 5))
+		else if ((in->instruction == 5 && in->next->instruction == 6)
+			|| (in->instruction == 6 && in->next->instruction == 5))
 		{
-			ft_compress_rotates(instructions, instructions->next);
+			ft_compress_rotates(in, in->next);
 		}
-		else if ((instructions->instruction == 8 && instructions->next->instruction == 9)
-			|| (instructions->instruction == 9 && instructions->next->instruction == 8))
+		else if ((in->instruction == 8 && in->next->instruction == 9)
+			|| (in->instruction == 9 && in->next->instruction == 8))
 		{
-			ft_compress_rotates(instructions, instructions->next);
+			ft_compress_rotates(in, in->next);
 		}
 		else
-		instructions = instructions->next;
+			in = in->next;
 	}
 }

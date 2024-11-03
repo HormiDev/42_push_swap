@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 22:00:49 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/07/16 23:48:59 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/11/03 02:07:35 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ static t_push_swap	*parsing2(t_push_swap *ps, t_strlst *input)
 	tmp = input;
 	while (tmp)
 	{
-		if (ft_is_repeat(ft_atoi(tmp->content), ps->a) ||
-			ft_atol(tmp->content) > 2147483647 ||
-			ft_atol(tmp->content) < -2147483648)
+		if (ft_is_repeat(ft_atoi(tmp->content), ps->a)
+			|| ft_atol(tmp->content) > 2147483647
+			|| ft_atol(tmp->content) < -2147483648)
 		{
 			ft_strlst_clear(input);
 			ft_free_push_swap(ps);
@@ -41,7 +41,6 @@ static t_push_swap	*parsing2(t_push_swap *ps, t_strlst *input)
 		}
 		ps->a = ft_add_new_last_stack(ft_atoi(tmp->content), ps->a);
 		tmp = tmp->next;
-		
 	}
 	ft_strlst_clear(input);
 	return (ps);
