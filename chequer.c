@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 04:14:21 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/11/03 02:02:58 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/12/15 21:52:43 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 int	ft_line_to_instruction(char *line)
 {
+	if (ft_strncmp(line, "rra", 3) == 0)
+		return (8);
+	if (ft_strncmp(line, "rrb", 3) == 0)
+		return (9);
+	if (ft_strncmp(line, "rrr", 3) == 0)
+		return (10);
 	if (ft_strncmp(line, "sa", 2) == 0)
 		return (0);
 	if (ft_strncmp(line, "sb", 2) == 0)
@@ -30,12 +36,6 @@ int	ft_line_to_instruction(char *line)
 		return (6);
 	if (ft_strncmp(line, "rr", 2) == 0)
 		return (7);
-	if (ft_strncmp(line, "rra", 3) == 0)
-		return (8);
-	if (ft_strncmp(line, "rrb", 3) == 0)
-		return (9);
-	if (ft_strncmp(line, "rrr", 3) == 0)
-		return (10);
 	return (-1);
 }
 
@@ -70,8 +70,6 @@ int	main(int narg, char **argv)
 	if (push_swap == 0)
 		return (0);
 	instructions = ft_parsing_instructions();
-	print_instructions(instructions);
-	printf("%d\n", STDIN_FILENO);
 	ft_execute_instructions(push_swap, instructions);
 	if (is_stack_ordered_min_max(push_swap->a))
 		write(1, "OK\n", 3);

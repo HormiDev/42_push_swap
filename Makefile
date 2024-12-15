@@ -6,7 +6,7 @@
 #    By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/22 18:43:11 by ide-dieg          #+#    #+#              #
-#    Updated: 2024/09/18 19:21:05 by ide-dieg         ###   ########.fr        #
+#    Updated: 2024/12/15 21:53:45 by ide-dieg         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -119,6 +119,8 @@ push_swap_bonus:
 re: fclean all
 
 # TESTS
+
+CHECKER_NAME = checker_linux
 
 VERDE = \033[0;32m
 ROJO = \033[0;31m
@@ -263,7 +265,7 @@ test9:
 test10:
 	@echo "test 10"
 	@echo "3 argumentos ordenados al revés"
-	@if [ "$$(./$(NAME) $(ARGS10) | ./checker_linux $(ARGS10))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS10) | ./$(CHECKER_NAME) $(ARGS10))" = "OK" ]; then \
 		echo -n "chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "chequer $(ROJO)[KO]$(NC)"; \
@@ -278,7 +280,7 @@ test10:
 test11:
 	@echo "test 11"
 	@echo "3 argumentos desordenados $(ARGS11)"
-	@if [ "$$(./$(NAME) $(ARGS11) | ./checker_linux $(ARGS11))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS11) | ./$(CHECKER_NAME) $(ARGS11))" = "OK" ]; then \
 		echo -n "chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "chequer $(ROJO)[KO]$(NC)"; \
@@ -293,7 +295,7 @@ test11:
 test12:
 	@echo "test 12"
 	@echo "3 argumentos desordenados $(ARGS12)"
-	@if [ "$$(./$(NAME) $(ARGS12) | ./checker_linux $(ARGS12))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS12) | ./$(CHECKER_NAME) $(ARGS12))" = "OK" ]; then \
 		echo -n "chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "chequer $(ROJO)[KO]$(NC)"; \
@@ -308,7 +310,7 @@ test12:
 test13:
 	@echo "test 13"
 	@echo "5 argumentos desordenados $(ARGS13)"
-	@if [ "$$(./$(NAME) $(ARGS13) | ./checker_linux $(ARGS13))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS13) | ./$(CHECKER_NAME) $(ARGS13))" = "OK" ]; then \
 		echo -n "chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "chequer $(ROJO)[KO]$(NC)"; \
@@ -323,7 +325,7 @@ test13:
 test14:
 	@echo "test 14"
 	@echo "5 argumentos desordenados $(ARGS14)"
-	@if [ "$$(./$(NAME) $(ARGS14) | ./checker_linux $(ARGS14))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS14) | ./$(CHECKER_NAME) $(ARGS14))" = "OK" ]; then \
 		echo -n "chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "chequer $(ROJO)[KO]$(NC)"; \
@@ -338,7 +340,7 @@ test14:
 test15:
 	@echo "test 15"
 	@echo "5 argumentos desordenados $(ARGS15)"
-	@if [ "$$(./$(NAME) $(ARGS15) | ./checker_linux $(ARGS15))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS15) | ./$(CHECKER_NAME) $(ARGS15))" = "OK" ]; then \
 		echo -n "chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "chequer $(ROJO)[KO]$(NC)"; \
@@ -353,7 +355,7 @@ test15:
 test16:
 	@echo "test 16"
 	@echo "100 argumentos desordenados"
-	@if [ "$$(./$(NAME) $(ARGS16_0) | ./checker_linux $(ARGS16_0))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS16_0) | ./$(CHECKER_NAME) $(ARGS16_0))" = "OK" ]; then \
 		echo -n "1. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "1. chequer $(ROJO)[KO]$(NC)"; \
@@ -373,7 +375,7 @@ test16:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS16) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS16_1) | ./checker_linux $(ARGS16_1))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS16_1) | ./$(CHECKER_NAME) $(ARGS16_1))" = "OK" ]; then \
 		echo -n "2. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "2. chequer $(ROJO)[KO]$(NC)"; \
@@ -393,7 +395,7 @@ test16:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS16_1) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS16_2) | ./checker_linux $(ARGS16_2))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS16_2) | ./$(CHECKER_NAME) $(ARGS16_2))" = "OK" ]; then \
 		echo -n "3. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "3. chequer $(ROJO)[KO]$(NC)"; \
@@ -413,7 +415,7 @@ test16:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS16_2) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS16_3) | ./checker_linux $(ARGS16_3))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS16_3) | ./$(CHECKER_NAME) $(ARGS16_3))" = "OK" ]; then \
 		echo -n "4. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "4. chequer $(ROJO)[KO]$(NC)"; \
@@ -433,7 +435,7 @@ test16:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS16_3) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS16_4) | ./checker_linux $(ARGS16_4))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS16_4) | ./$(CHECKER_NAME) $(ARGS16_4))" = "OK" ]; then \
 		echo -n "5. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "5. chequer $(ROJO)[KO]$(NC)"; \
@@ -453,7 +455,7 @@ test16:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS16_4) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS16_5) | ./checker_linux $(ARGS16_5))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS16_5) | ./$(CHECKER_NAME) $(ARGS16_5))" = "OK" ]; then \
 		echo -n "6. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "6. chequer $(ROJO)[KO]$(NC)"; \
@@ -473,7 +475,7 @@ test16:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS16_5) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS16_6) | ./checker_linux $(ARGS16_6))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS16_6) | ./$(CHECKER_NAME) $(ARGS16_6))" = "OK" ]; then \
 		echo -n "7. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "7. chequer $(ROJO)[KO]$(NC)"; \
@@ -493,7 +495,7 @@ test16:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS16_6) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS16_7) | ./checker_linux $(ARGS16_7))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS16_7) | ./$(CHECKER_NAME) $(ARGS16_7))" = "OK" ]; then \
 		echo -n "8. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "8. chequer $(ROJO)[KO]$(NC)"; \
@@ -513,7 +515,7 @@ test16:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS16_7) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS16_8) | ./checker_linux $(ARGS16_8))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS16_8) | ./$(CHECKER_NAME) $(ARGS16_8))" = "OK" ]; then \
 		echo -n "9. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "9. chequer $(ROJO)[KO]$(NC)"; \
@@ -533,7 +535,7 @@ test16:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS16_8) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS16_9) | ./checker_linux $(ARGS16_9))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS16_9) | ./$(CHECKER_NAME) $(ARGS16_9))" = "OK" ]; then \
 		echo -n "10. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "10. chequer $(ROJO)[KO]$(NC)"; \
@@ -558,7 +560,7 @@ test16:
 test17:
 	@echo "test 17"
 	@echo "500 argumentos desordenados"
-	@if [ "$$(./$(NAME) $(ARGS17_0) | ./checker_linux $(ARGS17_0))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS17_0) | ./$(CHECKER_NAME) $(ARGS17_0))" = "OK" ]; then \
 		echo -n "1. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "1. chequer $(ROJO)[KO]$(NC)"; \
@@ -578,7 +580,7 @@ test17:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS17_0) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS17_1) | ./checker_linux $(ARGS17_1))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS17_1) | ./$(CHECKER_NAME) $(ARGS17_1))" = "OK" ]; then \
 		echo -n "2. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "2. chequer $(ROJO)[KO]$(NC)"; \
@@ -598,7 +600,7 @@ test17:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS17_1) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS17_2) | ./checker_linux $(ARGS17_2))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS17_2) | ./$(CHECKER_NAME) $(ARGS17_2))" = "OK" ]; then \
 		echo -n "3. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "3. chequer $(ROJO)[KO]$(NC)"; \
@@ -618,7 +620,7 @@ test17:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS17_2) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS17_3) | ./checker_linux $(ARGS17_3))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS17_3) | ./$(CHECKER_NAME) $(ARGS17_3))" = "OK" ]; then \
 		echo -n "4. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "4. chequer $(ROJO)[KO]$(NC)"; \
@@ -638,7 +640,7 @@ test17:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS17_3) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS17_4) | ./checker_linux $(ARGS17_4))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS17_4) | ./$(CHECKER_NAME) $(ARGS17_4))" = "OK" ]; then \
 		echo -n "5. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "5. chequer $(ROJO)[KO]$(NC)"; \
@@ -658,7 +660,7 @@ test17:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS17_4) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS17_5) | ./checker_linux $(ARGS17_5))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS17_5) | ./$(CHECKER_NAME) $(ARGS17_5))" = "OK" ]; then \
 		echo -n "6. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "6. chequer $(ROJO)[KO]$(NC)"; \
@@ -678,7 +680,7 @@ test17:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS17_5) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS17_6) | ./checker_linux $(ARGS17_6))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS17_6) | ./$(CHECKER_NAME) $(ARGS17_6))" = "OK" ]; then \
 		echo -n "7. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "7. chequer $(ROJO)[KO]$(NC)"; \
@@ -698,7 +700,7 @@ test17:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS17_6) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS17_7) | ./checker_linux $(ARGS17_7))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS17_7) | ./$(CHECKER_NAME) $(ARGS17_7))" = "OK" ]; then \
 		echo -n "8. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "8. chequer $(ROJO)[KO]$(NC)"; \
@@ -718,7 +720,7 @@ test17:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS17_7) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS17_8) | ./checker_linux $(ARGS17_8))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS17_8) | ./$(CHECKER_NAME) $(ARGS17_8))" = "OK" ]; then \
 		echo -n "9. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "9. chequer $(ROJO)[KO]$(NC)"; \
@@ -740,7 +742,7 @@ test17:
 		echo "$(ROJO)[$$(./$(NAME) $(ARGS17_8) | wc -l)] 0 PUNTOS$(NC)"; \
 	fi
 
-	@if [ "$$(./$(NAME) $(ARGS17_9) | ./checker_linux $(ARGS17_9))" = "OK" ]; then \
+	@if [ "$$(./$(NAME) $(ARGS17_9) | ./$(CHECKER_NAME) $(ARGS17_9))" = "OK" ]; then \
 		echo -n "10. chequer $(VERDE)[OK]$(NC)"; \
 	else \
 		echo -n "10. chequer $(ROJO)[KO]$(NC)"; \
