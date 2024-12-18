@@ -6,7 +6,7 @@
 /*   By: ide-dieg <ide-dieg@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 04:14:21 by ide-dieg          #+#    #+#             */
-/*   Updated: 2024/12/15 21:52:43 by ide-dieg         ###   ########.fr       */
+/*   Updated: 2024/12/18 13:08:52 by ide-dieg         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,13 +43,21 @@ t_instructions	*ft_parsing_instructions(void)
 {
 	char			*line;
 	t_instructions	*instructions;
+	int				instruction;
 
 	instructions = 0;
 	line = get_next_line(0);
 	while (line != 0)
 	{
+		instruction = ft_line_to_instruction(line);
+		if (instruction == -1)
+		{
+			free(line);
+			ft_free_instructions(instructions);
+			return (0);
+		}
 		ft_add_last_instruction(&instructions,
-			ft_new_instruction(ft_line_to_instruction(line)));
+			ft_new_instruction(instruction));
 		free(line);
 		line = get_next_line(0);
 	}
@@ -70,8 +78,14 @@ int	main(int narg, char **argv)
 	if (push_swap == 0)
 		return (0);
 	instructions = ft_parsing_instructions();
+	if (instructions == 0)
+	{
+		ft_free_push_swap(push_swap);
+		return (0);
+	}
 	ft_execute_instructions(push_swap, instructions);
-	if (is_stack_ordered_min_max(push_swap->a))
+	if (is_stack_ordered_min_max(push_swap->a)
+		&& ft_stack_size(push_swap->b) == 0)
 		write(1, "OK\n", 3);
 	else
 		write(1, "KO\n", 3);
